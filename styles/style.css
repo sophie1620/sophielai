@@ -249,6 +249,11 @@ html {
   overflow: hidden;
 }
 
+/* site colours */
+body {
+  background-color: #F9F7F6;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 90%;
@@ -261,27 +266,87 @@ li {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+html {
+  font-size: 125%;
+}
+
+body {
+  font-family: "Lora", serif;
+  font-size: 1rem;
+  color: black;
 }
 
 h1 {
   font-family: "Ubuntu", sans-serif;
+  color: #4E4941;
+  font-size: 8rem;
+}
+h1 span.accentDot {
+  color: #EBB859;
 }
 
 h2 {
   font-family: "Ubuntu", sans-serif;
+  color: #4E4941;
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: "Ubuntu", sans-serif;
+  color: #4E4941;
+  font-size: 1.5rem;
 }
 
 p {
   font-family: "Lora", serif;
+  color: black;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.05rem;
 }
 
 a {
   text-decoration: none;
+  color: black;
 }
 
-h1 {
-  color: blue;
+i {
+  color: black;
+  font-size: 2.2rem;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.skills ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .portfolio ul {
@@ -292,4 +357,42 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer {
+  background-color: #7D9276;
+  padding: 20px;
+}
+footer p {
+  text-align: center;
+  color: #F9F7F6;
+}
+footer i {
+  color: #F9F7F6;
+}
+
+.footerContactLinks,
+.creativeLicense {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.footerContactLinks ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footerContactLinks ul li {
+  width: 33.3333333333%;
+  text-align: center;
 }
