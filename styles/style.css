@@ -249,12 +249,19 @@ html {
   overflow: hidden;
 }
 
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
 li {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
+img {
+  display: block;
+  width: 100%;
 }
 
 h1 {
@@ -269,6 +276,20 @@ p {
   font-family: "Lora", serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   color: blue;
+}
+
+.portfolio ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }

@@ -1,7 +1,15 @@
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
 li {
     list-style: none;
 }
 
-a {
-    text-decoration: none;
+
+img {
+    display: block;
+    width: 100%;
 }
