@@ -296,10 +296,16 @@ h1 span.accentDot {
 h2 {
   font-family: "Ubuntu", sans-serif;
   color: #4E4941;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 h3 {
+  font-family: "Ubuntu", sans-serif;
+  color: #4E4941;
+  font-size: 2rem;
+}
+
+h4 {
   font-family: "Ubuntu", sans-serif;
   color: #4E4941;
   font-size: 1.5rem;

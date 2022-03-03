@@ -21,10 +21,16 @@ h1 {
 h2 {
     font-family: $headerFont;
     color: $headerColor;
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 h3 {
+    font-family: $headerFont;
+    color: $headerColor;
+    font-size: 2rem;
+}
+
+h4 {
     font-family: $headerFont;
     color: $headerColor;
     font-size: 1.5rem;
