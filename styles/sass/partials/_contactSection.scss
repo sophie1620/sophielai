@@ -1,3 +1,7 @@
+section.contact {
+    height: 70vh;
+}
+
 .contact h3::after {
     content:'';
     width: 14.5rem;
@@ -7,4 +11,19 @@
     margin-left: -23.5%;
     margin-top: 0.7rem;
     z-index: -10;
+}
+
+fieldset{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+
+    label,
+    input, 
+    textarea {
+        margin-bottom: 1rem;
+    }
 }

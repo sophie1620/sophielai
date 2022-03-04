@@ -53,50 +53,55 @@
         <!-- about section -->
         <section id="about" class="about wrapper">
             <div class="aboutMe">
+                <div class="bio">
                 <h3>About Me</h3>
-                <p>I'm a front-end developer and a graduate of Juno College's Web Development Bootcamp.  I create responsive and inclusive websites that are accessible to all. I use my teaching background to ensure that the websites are user-friendly and intuitive. </p>
-
-                <p>Prior to my transition into web development, I taught English in South Korean and China.  I love interacting with different people and exploring new cities.  My ideal trip includes: visiting different cafès, eating different foods, sightseeing, and going on hikes.</p>
+                    <div class="pContainer">
+                        <p>I'm a front-end developer and a graduate of Juno College's Web Development Bootcamp.  I create responsive and inclusive websites that are accessible to all. I use my teaching background to ensure that the websites are user-friendly and intuitive. </p>
+                        
+                        <p>Prior to my transition into web development, I taught English in South Korean and China.  I love interacting with different people and exploring new cities.  My ideal trip includes: visiting different cafès, eating different foods, sightseeing, and going on hikes.</p>
+                    </div> <!-- end of .pContainer-->
+                </div> <!-- end of .bio -->
+                <div class="imgContainer">
+                    <img src="./assets/sophie.png" alt="profile picture of Sophie">
                 </div>
-                <div class="skills">
-                    <h4>Skills</h4>
-                    <ul class="skills">
-                        <li>
-                            <i class="fab fa-html5" title="HTML5"></i>
-                            <span class="sr-only">HTML5</span>
-                        </li>
-                        <li>
-                            <i class="fab fa-css3-alt" title="CSS3"></i>
-                            <span class="sr-only">CSS3</span>
-                        </li>
-                        <li>
-                            <i class="fab fa-sass" title="SASS"></i>
-                            <span class="sr-only">SASS</span>
-                        </li>
-                        <li>
-                            <i class="fab fa-js-square" title="JavaScript"></i>
-                            <span class="sr-only">JavaScript</span>
-                        </li>
-                        <li>
-                            <i class="devicon-jquery-plain-wordmark" title="jQuery"></i>
-                            <span class="sr-only">jQuery</span>
-                        </li>
-                        <li>
-                            <i class="fab fa-react" title="React"></i>
-                            <span class="sr-only">React</span>
-                        </li>
-                        <li>
-                            <i class="fab fa-git-square" title="Git"></i>
-                            <span class="sr-only">Git</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-cog" title="RESTful API"></i>
-                            <span class="sr-only">RESTful API</span>
-                        </li>
-                    </ul>
-                </div>
-                    
-                    
+            </div> <!-- end of .aboutMe -->
+            <div class="skills">
+                <h4>Skills</h4>
+                <ul class="skills">
+                    <li>
+                        <i class="fab fa-html5" title="HTML5"></i>
+                        <span class="sr-only">HTML5</span>
+                    </li>
+                    <li>
+                        <i class="fab fa-css3-alt" title="CSS3"></i>
+                        <span class="sr-only">CSS3</span>
+                    </li>
+                    <li>
+                        <i class="fab fa-sass" title="SASS"></i>
+                        <span class="sr-only">SASS</span>
+                    </li>
+                    <li>
+                        <i class="fab fa-js-square" title="JavaScript"></i>
+                        <span class="sr-only">JavaScript</span>
+                    </li>
+                    <li>
+                        <i class="devicon-jquery-plain-wordmark" title="jQuery"></i>
+                        <span class="sr-only">jQuery</span>
+                    </li>
+                    <li>
+                        <i class="fab fa-react" title="React"></i>
+                        <span class="sr-only">React</span>
+                    </li>
+                    <li>
+                        <i class="fab fa-git-square" title="Git"></i>
+                        <span class="sr-only">Git</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-cog" title="RESTful API"></i>
+                        <span class="sr-only">RESTful API</span>
+                    </li>
+                </ul>
+            </div> <!-- end of .skills -->   
         </section>
 
         <!-- portfolio section -->
@@ -113,7 +118,7 @@
                             </ul>
                         </div>
                         <div class="product">
-                            <div class="imageContainer"> 
+                            <div class="imgContainer"> 
                                 <a href="https://sleepy-spence-a465b9.netlify.app/" target="blank"><img src="./assets/project01.png" alt="front page header of Sanctuary Helpers" class="projectImage"></a>
                             </div>
                             <div class="projectDetails">
@@ -152,7 +157,7 @@
                             </ul>
                         </div>
                         <div class="product">
-                            <div class="imageContainer">
+                            <div class="imgContainer">
                                 <a href="https://hardcore-euler-3fd3cd.netlify.app/" target="blank"><img src="./assets/project02.png" alt="front page header of Weather to Run or Not app" class="projectImage"></a>
                             </div>
                             <div class="projectDetails">
@@ -199,7 +204,7 @@
                             </ul>
                         </div>
                         <div class="product"> 
-                            <div class="imageContainer">
+                            <div class="imgContainer">
                                 <a href="#linkProject3" target="blank"><img src="http://placecorgi.com/260/180" alt="placeholder" class="projectImage"></a>
                             </div>
                             <div class="projectDetails">
@@ -252,13 +257,13 @@
             <form action="https://formspree.io/f/mdobzzbr" method="POST">
                 <fieldset>
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" placeholder="Full Name">
 
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" placeholder="email address">
 
                     <label for="message">Message</label>
-                    <input type="text" name="message" id="message">
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message here"></textarea>
 
                     <button type="submit">Send</button>
 
