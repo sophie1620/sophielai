@@ -274,6 +274,28 @@ ul {
   list-style-type: none;
 }
 
+button {
+  background-color: #7D9276;
+  color: #F9F7F6;
+  border: 2px solid #7D9276;
+  padding: 5px 40px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(0, 0, 0, 0.3) 1.95px 1.95px 2.6px;
+}
+
+button:hover {
+  background-color: #EBB859;
+}
+
+button:focus {
+  border: 1px dashed black;
+}
+
+button:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 html {
   font-size: 125%;
 }
@@ -297,18 +319,42 @@ h2 {
   font-family: "Ubuntu", sans-serif;
   color: #4E4941;
   font-size: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 h3 {
   font-family: "Ubuntu", sans-serif;
   color: #4E4941;
   font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 h4 {
   font-family: "Ubuntu", sans-serif;
   color: #4E4941;
   font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h5 {
+  font-family: "Ubuntu", sans-serif;
+  color: #4E4941;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 p {
@@ -329,7 +375,12 @@ i {
   font-size: 2.2rem;
 }
 
-nav ul {
+.mobileNav,
+i.mobileNav {
+  display: none;
+}
+
+nav ul.desktopNav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,6 +391,96 @@ nav ul {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+nav ul.desktopNav li {
+  padding-left: 50px;
+}
+nav ul.desktopNav a:hover {
+  border-bottom: 3px solid #7D9276;
+}
+
+header {
+  padding-top: 2rem;
+}
+
+h1 {
+  width: 50%;
+  overflow: hidden;
+  border-right: 0.03em solid #7D9276;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  -webkit-animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+/* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #7D9276;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #7D9276;
+  }
+}
+h2::after {
+  content: "";
+  width: 21rem;
+  height: 3rem;
+  background: #EBB859CC;
+  display: inline;
+  margin-left: -34%;
+  margin-top: 1.5rem;
+  z-index: -10;
+  -webkit-transition: 4s ease-in;
+  transition: 4s ease-in;
+}
+
+.aboutMe h3::after {
+  content: "";
+  width: 9.5rem;
+  height: 1.5rem;
+  background: #EBB859CC;
+  display: inline;
+  margin-left: -15%;
+  margin-top: 0.7rem;
+  z-index: -10;
+}
+
+.skills h4::after {
+  content: "";
+  width: 4rem;
+  height: 1.2rem;
+  background: #EBB859CC;
+  display: inline;
+  margin-left: -6%;
+  margin-top: 0.5rem;
+  z-index: -10;
 }
 
 .skills ul {
@@ -353,6 +494,23 @@ nav ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.skills ul li {
+  width: 3.5rem;
+  text-align: center;
+}
+
+.portfolio h3::after {
+  content: "";
+  width: 18rem;
+  height: 1.5rem;
+  background: #EBB859CC;
+  display: inline;
+  margin-left: -29%;
+  margin-top: 0.7rem;
+  z-index: -10;
 }
 
 .portfolio ul {
@@ -368,8 +526,19 @@ nav ul {
           justify-content: center;
 }
 
+.contact h3::after {
+  content: "";
+  width: 14.5rem;
+  height: 1.5rem;
+  background: #EBB859CC;
+  display: inline;
+  margin-left: -23.5%;
+  margin-top: 0.7rem;
+  z-index: -10;
+}
+
 footer {
-  background-color: #7D9276;
+  background-color: #EBB859;
   padding: 20px;
 }
 footer p {

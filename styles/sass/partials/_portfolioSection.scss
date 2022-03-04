@@ -1,3 +1,14 @@
+.portfolio h3::after {
+    content:'';
+    width: 18rem;
+    height: 1.5rem;
+    background: $primaryLight;
+    display: inline;
+    margin-left: -29%;
+    margin-top: 0.7rem;
+    z-index: -10;
+}
+
 .portfolio ul {
     display: flex;
     flex-direction: row;

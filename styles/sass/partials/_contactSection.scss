@@ -1,0 +1,10 @@
+.contact h3::after {
+    content:'';
+    width: 14.5rem;
+    height: 1.5rem;
+    background: $primaryLight;
+    display: inline;
+    margin-left: -23.5%;
+    margin-top: 0.7rem;
+    z-index: -10;
+}

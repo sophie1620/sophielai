@@ -25,3 +25,22 @@ ul {
 // a:hover & :focus
 
 // button styling
+button {
+    background-color: $secondary;
+    color: $backgroundColor;
+    border: 2px solid $secondary;
+    padding: 5px 40px;
+    box-shadow: rgba(0, 0, 0, 0.30) 1.95px 1.95px 2.6px;
+}
+
+button:hover {
+    background-color: $primary;
+}
+
+button:focus {
+    border: 1px dashed $fontColor;
+}
+
+button:active {
+    box-shadow: none
+}

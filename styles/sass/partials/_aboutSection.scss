@@ -1,6 +1,33 @@
+.aboutMe h3::after {
+    content:'';
+    width: 9.5rem;
+    height: 1.5rem;
+    background: $primaryLight;
+    display: inline;
+    margin-left: -15%;
+    margin-top: 0.7rem;
+    z-index: -10;
+}
+
+.skills h4::after {
+    content:'';
+    width: 4rem;
+    height: 1.2rem;
+    background: $primaryLight;
+    display: inline;
+    margin-left: -6%;
+    margin-top: 0.5rem;
+    z-index: -10;
+}
+
 .skills ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 
+    li {
+        width: 3.5rem;
+        text-align: center;
+    }
 }

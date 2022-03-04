@@ -1,9 +1,23 @@
+.mobileNav, 
+i.mobileNav {
+    display: none;
+}
+
 nav {
-    ul {
+
+    ul.desktopNav {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         // border: 1px solid red;
 
+
+        li {
+            padding-left: 50px;
+        }
+
+        a:hover {
+            border-bottom: 3px solid $secondary;
+        }
     }
 }

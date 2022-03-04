@@ -20,11 +20,21 @@
     <!-- devicon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
 
+    <!-- css animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </head>
 <body>
-    <!-- nav -->
     <nav class="wrapper">
-        <ul>
+        <ul class="desktopNav">
+            <li> <a href="#about">about</a> </li>
+            <li> <a href="#portfolio">portfolio</a> </li>
+            <li> <a href="#contact">contact</a> </li>
+        </ul>
+
+        <input type="checkbox" name="nav" id="nav" class="mobileNav">
+        <i class="fas fa-bars mobileNav"></i>
+        <ul class="mobileNav">
             <li> <a href="#about">about</a> </li>
             <li> <a href="#portfolio">portfolio</a> </li>
             <li> <a href="#contact">contact</a> </li>
@@ -33,11 +43,8 @@
     <!-- header -->
     <header>
         <div class="wrapper">
-            <div class="headerIntro">
-                <h1>hello<span class="accentDot">.</span></h1>
-                <h2>I'm Sophie!</h2>
-            </div>
-            <img src="" alt="">
+            <h1>hello<span class="accentDot">.</span></h1>
+            <h2 class="animate__animated animate__fadeInLeft">I'm Sophie!</h2>
         </div>
     </header> <!-- end of header -->
 
@@ -46,7 +53,6 @@
         <!-- about section -->
         <section id="about" class="about wrapper">
             <div class="aboutMe">
-
                 <h3>About Me</h3>
                 <p>I'm a front-end developer and a graduate of Juno College's Web Development Bootcamp.  I create responsive and inclusive websites that are accessible to all. I use my teaching background to ensure that the websites are user-friendly and intuitive. </p>
 
@@ -100,7 +106,7 @@
                 <ul>
                     <li>
                         <div class="productLinks">
-                            <h4>Sanctuary Helpers</h4>
+                            <h5>Sanctuary Helpers</h5>
                             <ul>
                                 <li><a href="https://sleepy-spence-a465b9.netlify.app/" target="blank">live</a></li>
                                 <li><a href="https://github.com/sophie1620/sophie-lai-project01" target="blank">repo</a></li>
@@ -139,7 +145,7 @@
                     </li>
                     <li> <!-- project 2 details -->
                         <div class="productLinks">
-                            <h4>Weather to Run (or Not)</h4>
+                            <h5>Weather to Run (or Not)</h5>
                             <ul>
                                 <li><a href="https://hardcore-euler-3fd3cd.netlify.app/" target="blank">live</a></li>
                                 <li><a href="https://github.com/sophie1620/project-02" target="blank">repo</a></li>
@@ -186,7 +192,7 @@
                     </li>
                     <li> <!-- project 3 details -->
                         <div class="productLinks">
-                            <h4>Project 3</h4>
+                            <h5>Project 3</h5>
                             <ul>
                                 <li><a href="#" target="blank">live</a></li>
                                 <li><a href="#" target="blank">repo</a></li>

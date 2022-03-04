@@ -22,18 +22,30 @@ h2 {
     font-family: $headerFont;
     color: $headerColor;
     font-size: 4rem;
+    display: flex;
+    justify-content: center;
 }
 
 h3 {
     font-family: $headerFont;
     color: $headerColor;
     font-size: 2rem;
+    display: flex;
 }
 
 h4 {
     font-family: $headerFont;
     color: $headerColor;
     font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+h5 {
+    font-family: $headerFont;
+    color: $headerColor;
+    font-size: 1.2rem;
+    display: flex;
 }
 
 p {
