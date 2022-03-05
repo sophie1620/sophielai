@@ -1,5 +1,6 @@
 section.about {
-    height: 90vh;
+    // height: 90vh;
+    height: auto;
 }
 
 .aboutMe h3::after {
@@ -8,7 +9,7 @@ section.about {
     height: 1.5rem;
     background: $primaryLight;
     display: inline;
-    margin-left: -22%;
+    margin-left: -180px;
     margin-top: 0.7rem;
     z-index: -10;
 }
@@ -29,7 +30,7 @@ section.about {
     height: 1.2rem;
     background: $primaryLight;
     display: inline;
-    margin-left: -6%;
+    margin-left: -70px;
     margin-top: 0.5rem;
     z-index: -10;
 }

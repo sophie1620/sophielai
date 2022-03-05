@@ -1,5 +1,7 @@
 section.portfolio {
-    max-height: 90vh;
+    // height: 90vh;
+    padding: 0 0 3rem;
+    margin-top: 100px;
 }
 
 .portfolio h3::after {
@@ -8,7 +10,7 @@ section.portfolio {
     height: 1.5rem;
     background: $primaryLight;
     display: inline;
-    margin-left: -29%;
+    margin-left: -350px;
     margin-top: 0.7rem;
     z-index: -10;
 }
@@ -17,12 +19,21 @@ section.portfolio {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
 
     li.projectContainer {
-        width: calc( (100% / 3) - 3rem);
-        border-radius: 20px;
-        border: 3px solid $secondary;
+        width: 330px;
+        border-radius: 10px;
+        border: 5px solid $secondary;
+        background-color: $secondaryLight;
+        padding: 45px 0.5rem;
+        margin: 1rem;
+    }
+
+    li.projectContainer:hover {
+        background-color: $primaryLight;
+        border: 5px solid $primary;
+        transform: scale(1.03);
     }
 }
 
@@ -54,11 +65,19 @@ section.portfolio {
     img {
         width: auto;
         height: 100%;
+        border: 2px solid #2F4F4F;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 2px 3px 5px;
+    }
+
+    img:hover {
+        border: 2px solid #FFAB40;
     }
 }
 
 .projectDescription p {
         text-align: center;
+        font-size: 0.7rem;
 }
 
 .skillsUsed ul {
@@ -69,7 +88,15 @@ section.portfolio {
 
     li {
         text-align: center;
-        width: 51px;
+        width: 80px;
         margin: 0.5rem;
+        border: 3px solid $primary;
+        padding: 5px;
+        border-radius: 20px;
+        background-color: #FBF6EA;
+
+        i {
+            font-size: 1.4rem;
+        }
     }
 }

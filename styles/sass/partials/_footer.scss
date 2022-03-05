@@ -1,6 +1,6 @@
 footer {
     background-color: $primary;
-    padding: 20px;
+    padding: 10px 0 20px;
 
     p {
         text-align: center;
@@ -26,6 +26,20 @@ footer {
     li {
         width: calc(100% / 3);
         text-align: center;
+
+        i {
+            font-size: 1.5rem;
+            border: 1px solid transparent;
+            padding: 5px;
+
+            &:hover {
+                color: $secondary;
+            }
+
+            &:focus {
+                border: 1px dotted $secondary;
+            }
+        }
     }
 }
 

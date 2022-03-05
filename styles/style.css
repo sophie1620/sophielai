@@ -277,14 +277,16 @@ ul {
 button {
   background-color: #7D9276;
   color: #F9F7F6;
-  border: 2px solid #7D9276;
+  border: 1px solid #7D9276;
+  border-radius: 10px;
   padding: 5px 40px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 1.95px 1.95px 2.6px;
-          box-shadow: rgba(0, 0, 0, 0.3) 1.95px 1.95px 2.6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 5px;
+          box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 5px;
 }
 
 button:hover {
   background-color: #EBB859;
+  border: 1px solid #EBB859;
 }
 
 button:focus {
@@ -462,9 +464,9 @@ h2::after {
   content: "";
   width: 21rem;
   height: 3rem;
-  background: #EBB859CC;
+  background: #EBB85980;
   display: inline;
-  margin-left: -34%;
+  margin-left: -410px;
   margin-top: 1.5rem;
   z-index: -10;
   -webkit-transition: 4s ease-in;
@@ -472,16 +474,16 @@ h2::after {
 }
 
 section.about {
-  height: 90vh;
+  height: auto;
 }
 
 .aboutMe h3::after {
   content: "";
   width: 9.5rem;
   height: 1.5rem;
-  background: #EBB859CC;
+  background: #EBB85980;
   display: inline;
-  margin-left: -22%;
+  margin-left: -180px;
   margin-top: 0.7rem;
   z-index: -10;
 }
@@ -506,9 +508,9 @@ section.about {
   content: "";
   width: 4rem;
   height: 1.2rem;
-  background: #EBB859CC;
+  background: #EBB85980;
   display: inline;
-  margin-left: -6%;
+  margin-left: -70px;
   margin-top: 0.5rem;
   z-index: -10;
 }
@@ -533,16 +535,17 @@ section.about {
 }
 
 section.portfolio {
-  max-height: 90vh;
+  padding: 0 0 3rem;
+  margin-top: 100px;
 }
 
 .portfolio h3::after {
   content: "";
   width: 18rem;
   height: 1.5rem;
-  background: #EBB859CC;
+  background: #EBB85980;
   display: inline;
-  margin-left: -29%;
+  margin-left: -350px;
   margin-top: 0.7rem;
   z-index: -10;
 }
@@ -558,11 +561,22 @@ section.portfolio {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .portfolio ul li.projectContainer {
-  width: calc(33.3333333333% - 3rem);
-  border-radius: 20px;
-  border: 3px solid #7D9276;
+  width: 330px;
+  border-radius: 10px;
+  border: 5px solid #7D9276;
+  background-color: #7D927680;
+  padding: 45px 0.5rem;
+  margin: 1rem;
+}
+.portfolio ul li.projectContainer:hover {
+  background-color: #EBB85980;
+  border: 5px solid #EBB859;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .productLinks h5 {
@@ -595,10 +609,18 @@ section.portfolio {
 .product .imgContainer img {
   width: auto;
   height: 100%;
+  border: 2px solid #2F4F4F;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 2px 3px 5px;
+          box-shadow: rgba(0, 0, 0, 0.35) 2px 3px 5px;
+}
+.product .imgContainer img:hover {
+  border: 2px solid #FFAB40;
 }
 
 .projectDescription p {
   text-align: center;
+  font-size: 0.7rem;
 }
 
 .skillsUsed ul {
@@ -617,21 +639,28 @@ section.portfolio {
 }
 .skillsUsed ul li {
   text-align: center;
-  width: 51px;
+  width: 80px;
   margin: 0.5rem;
+  border: 3px solid #EBB859;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #FBF6EA;
+}
+.skillsUsed ul li i {
+  font-size: 1.4rem;
 }
 
 section.contact {
-  height: 70vh;
+  height: auto;
 }
 
 .contact h3::after {
   content: "";
   width: 14.5rem;
   height: 1.5rem;
-  background: #EBB859CC;
+  background: #EBB85980;
   display: inline;
-  margin-left: -23.5%;
+  margin-left: -280px;
   margin-top: 0.7rem;
   z-index: -10;
 }
@@ -650,16 +679,24 @@ fieldset {
           justify-content: center;
   width: 50%;
   margin: 0 auto;
+  padding-bottom: 100px;
 }
 fieldset label,
 fieldset input,
 fieldset textarea {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+fieldset textarea {
+  resize: none;
+  width: 100%;
+  height: 200px;
 }
 
 footer {
   background-color: #EBB859;
-  padding: 20px;
+  padding: 10px 0 20px;
 }
 footer p {
   text-align: center;
@@ -690,6 +727,17 @@ footer i {
 .footerContactLinks ul li {
   width: 33.3333333333%;
   text-align: center;
+}
+.footerContactLinks ul li i {
+  font-size: 1.5rem;
+  border: 1px solid transparent;
+  padding: 5px;
+}
+.footerContactLinks ul li i:hover {
+  color: #7D9276;
+}
+.footerContactLinks ul li i:focus {
+  border: 1px dotted #7D9276;
 }
 
 p.creativeDesign {
