@@ -1,0 +1,122 @@
+@media (max-width: 1080px) {
+    h1 {
+        font-size: 6.5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+
+        &::after {
+            width: 16rem;
+            margin-left: -305px;
+            margin-top: 1.2rem;
+            height: 2rem;
+        }
+    }
+
+    fieldset {
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 1000px) {
+    fieldset {
+        width: 450px;
+    }
+}
+
+@media (max-width: 840px) {
+    header {
+        height: 80vh;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+
+        &::after {
+            width: 10.5rem;
+            margin-left: -205px;
+            margin-top: 0.8rem;
+            height: 1.5rem;
+        }
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.3rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+    
+    p {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+
+    i {
+        font-size: 1.8rem;
+    }
+
+    /* media queries for the nav section */
+    nav {
+        position: static;
+        
+        ul.desktopNav {
+            display: none;
+        }
+
+        .mobileNav, 
+        i.mobileNav {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        i.mobileNav {
+            position: fixed;
+        }
+    }
+
+
+    /* media queries for about section */
+    .aboutMe h3::after {
+        width: 7rem;
+        height: 1.2rem;
+        margin-left: -135px;
+        margin-top: 0.6rem;
+    }
+
+    .aboutMe .imgContainer {
+        width: 40%;
+    }
+
+    .skills h4::after {
+        width: 3.3rem;
+        height: 1rem;
+        margin-left: -60px;
+        // margin-top: 0.3rem;
+    }
+
+    /* media queries for portfolio section */
+    .portfolio h3::after {
+        width: 13.5rem;
+        height: 1.2rem;
+        margin-left: -265px;
+        margin-top: 0.6rem;
+    }
+
+    /* media queries for contact section */
+    .contact h3::after {
+        width: 10.8rem;
+        height: 1.2rem;
+        margin-left: -210px;
+        margin-top: 0.6rem;
+    }
+}

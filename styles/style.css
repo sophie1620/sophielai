@@ -312,6 +312,7 @@ h1 {
   font-family: "Ubuntu", sans-serif;
   color: #4E4941;
   font-size: 8rem;
+  text-align: center;
 }
 h1 span.accentDot {
   color: #EBB859;
@@ -380,11 +381,17 @@ i {
   font-size: 2.2rem;
 }
 
-.mobileNav,
-i.mobileNav {
+nav {
+  background-color: #F9F7F6;
+  position: fixed;
+  width: 100%;
+  padding: 25px 0;
+  z-index: 50;
+}
+nav .mobileNav,
+nav i.mobileNav {
   display: none;
 }
-
 nav ul.desktopNav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -416,14 +423,14 @@ header {
 }
 
 h1 {
-  width: 50%;
+  width: 60%;
   overflow: hidden;
   border-right: 0.03em solid #7D9276;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.15em;
-  -webkit-animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
-          animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+  -webkit-animation: typing 3.5s steps(30, end), blink 0.5s step-end infinite;
+          animation: typing 3.5s steps(30, end), blink 0.5s step-end infinite;
 }
 
 /* The typing effect */
@@ -432,7 +439,7 @@ h1 {
     width: 0;
   }
   to {
-    width: 50%;
+    width: 60%;
   }
 }
 @keyframes typing {
@@ -440,11 +447,11 @@ h1 {
     width: 0;
   }
   to {
-    width: 50%;
+    width: 60%;
   }
 }
 /* The typewriter cursor effect */
-@-webkit-keyframes blink-caret {
+@-webkit-keyframes blink {
   from, to {
     border-color: transparent;
   }
@@ -452,7 +459,7 @@ h1 {
     border-color: #7D9276;
   }
 }
-@keyframes blink-caret {
+@keyframes blink {
   from, to {
     border-color: transparent;
   }
@@ -471,6 +478,11 @@ h2::after {
   z-index: -10;
   -webkit-transition: 4s ease-in;
   transition: 4s ease-in;
+}
+
+.h2div {
+  height: 8rem;
+  border: 1px solid transparent;
 }
 
 section.about {
@@ -569,7 +581,7 @@ section.portfolio {
   border-radius: 10px;
   border: 5px solid #7D9276;
   background-color: #7D927680;
-  padding: 45px 0.5rem;
+  padding: 45px 0.5rem 20spx;
   margin: 1rem;
 }
 .portfolio ul li.projectContainer:hover {
@@ -749,4 +761,123 @@ p.designInspo {
   font-size: 0.8rem;
   line-height: 0;
   padding: 0;
+}
+
+@media (max-width: 1080px) {
+  h1 {
+    font-size: 6.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+  h2::after {
+    width: 16rem;
+    margin-left: -305px;
+    margin-top: 1.2rem;
+    height: 2rem;
+  }
+
+  fieldset {
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 1000px) {
+  fieldset {
+    width: 450px;
+  }
+}
+@media (max-width: 840px) {
+  header {
+    height: 80vh;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  h2::after {
+    width: 10.5rem;
+    margin-left: -205px;
+    margin-top: 0.8rem;
+    height: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+
+  i {
+    font-size: 1.8rem;
+  }
+
+  /* media queries for the nav section */
+  nav {
+    position: static;
+  }
+  nav ul.desktopNav {
+    display: none;
+  }
+  nav .mobileNav,
+nav i.mobileNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  nav i.mobileNav {
+    position: fixed;
+  }
+
+  /* media queries for about section */
+  .aboutMe h3::after {
+    width: 7rem;
+    height: 1.2rem;
+    margin-left: -135px;
+    margin-top: 0.6rem;
+  }
+
+  .aboutMe .imgContainer {
+    width: 40%;
+  }
+
+  .skills h4::after {
+    width: 3.3rem;
+    height: 1rem;
+    margin-left: -60px;
+  }
+
+  /* media queries for portfolio section */
+  .portfolio h3::after {
+    width: 13.5rem;
+    height: 1.2rem;
+    margin-left: -265px;
+    margin-top: 0.6rem;
+  }
+
+  /* media queries for contact section */
+  .contact h3::after {
+    width: 10.8rem;
+    height: 1.2rem;
+    margin-left: -210px;
+    margin-top: 0.6rem;
+  }
 }

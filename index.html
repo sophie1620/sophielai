@@ -25,16 +25,16 @@
 
 </head>
 <body>
-    <nav class="wrapper">
-        <ul class="desktopNav">
+    <nav>
+        <ul class="desktopNav wrapper">
             <li> <a href="#about">about</a> </li>
             <li> <a href="#portfolio">portfolio</a> </li>
             <li> <a href="#contact">contact</a> </li>
         </ul>
 
         <input type="checkbox" name="nav" id="nav" class="mobileNav">
-        <i class="fas fa-bars mobileNav"></i>
-        <ul class="mobileNav">
+        <i class="fas fa-bars mobileNav wrapper"></i>
+        <ul class="mobileNav wrapper">
             <li> <a href="#about">about</a> </li>
             <li> <a href="#portfolio">portfolio</a> </li>
             <li> <a href="#contact">contact</a> </li>
@@ -44,7 +44,8 @@
     <header>
         <div class="wrapper">
             <h1>hello<span class="accentDot">.</span></h1>
-            <h2 class="animate__animated animate__fadeInLeft">I'm Sophie!</h2>
+            <div class="h2div"></div>
+            <!-- <h2 class="animate__animated animate__fadeInLeft">I'm Sophie!</h2> -->
         </div>
     </header> <!-- end of header -->
 
@@ -259,10 +260,10 @@
                 <!-- method="POST" -->
                 <fieldset>
                     <label for="name" class="sr-only">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Full Name">
+                    <input type="text" name="name" id="name" placeholder="Full name">
 
                     <label for="email" class="sr-only">Email</label>
-                    <input type="email" name="email" id="email" placeholder="email address">
+                    <input type="email" name="email" id="email" placeholder="Email address">
 
                     <label for="message" class="sr-only">Message</label>
                     <textarea name="message" id="message" placeholder="Your message here"></textarea>

@@ -7,7 +7,7 @@ header {
 
 // typewriter effect
 h1 {
-    width: 50%;
+    width: 60%;
     overflow: hidden;
     border-right: .03em solid $secondary;
     white-space: nowrap;
@@ -15,17 +15,17 @@ h1 {
     letter-spacing: .15em;
     animation: 
         typing 3.5s steps(30, end), 
-        blink-caret 0.5s step-end infinite;
+        blink 0.5s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
     from { width: 0 }
-    to { width: 50% }
+    to { width: 60% }
 }
 
 /* The typewriter cursor effect */
-@keyframes blink-caret {
+@keyframes blink {
     from, to { border-color: transparent }
     50% { border-color: $secondary }
 }
@@ -40,6 +40,11 @@ h2::after {
     margin-top: 1.5rem;
     z-index: -10;
     transition: 4s ease-in;
+}
+
+.h2div {
+    height: 8rem;
+    border: 1px solid transparent;
 }
 
 
