@@ -14,14 +14,30 @@ section.contact {
     z-index: -10;
 }
 
+.messageForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .thankYouMsg {
+        width: 30%;
+    }
+}
+
 fieldset{
     border: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     padding-bottom: 100px;
+
+    .senderInfo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 
     label,
     input, 
@@ -29,6 +45,10 @@ fieldset{
         margin-bottom: 0.8rem;
         padding: 0.5rem;
         border-radius: 10px;
+    }
+
+    input {
+        width: 50%;
     }
 
     textarea {
