@@ -18,6 +18,10 @@ h1.hello {
         blink 0.5s step-end infinite;
 }
 
+h1.mobileH1 {
+    display: none;
+}
+
 /* The typing effect */
 @keyframes typing {
     from { width: 0 }

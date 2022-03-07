@@ -3,14 +3,14 @@
         font-size: 6.5rem;
     }
 
-    h2 {
-        font-size: 3rem;
+    .nameDiv h1 {
+        font-size: 5rem;
 
         &::after {
-            width: 16rem;
-            margin-left: -305px;
-            margin-top: 1.2rem;
-            height: 2rem;
+            width: 30rem;
+            margin-left: -510px;
+            margin-top: 2.5rem;
+            height: 4rem;
         }
     }
 
@@ -33,26 +33,26 @@
         font-size: 5rem;
     }
 
-    h2 {
-        font-size: 2rem;
+    .nameDiv h1 {
+        font-size: 4rem;
 
         &::after {
-            width: 10.5rem;
-            margin-left: -205px;
-            margin-top: 0.8rem;
-            height: 1.5rem;
+            width: 24rem;
+            margin-left: -410px;
+            margin-top: 2rem;
+            height: 3.5rem;
         }
     }
 
-    h3 {
+    h2 {
         font-size: 1.5rem;
     }
 
-    h4 {
+    h3 {
         font-size: 1.3rem;
     }
 
-    h5 {
+    h4 {
         font-size: 1rem;
     }
     
@@ -68,6 +68,7 @@
     /* media queries for the nav section */
     nav {
         position: static;
+        padding: 0;
         
         ul.desktopNav {
             display: none;
@@ -81,8 +82,8 @@
     }
 
     /* media queries for about section */
-    .aboutMe h3::after {
-        width: 7rem;
+    .aboutMe h2::after {
+        width: 8.3rem;
         height: 1.2rem;
         margin-left: -135px;
         margin-top: 0.6rem;
@@ -92,27 +93,31 @@
         width: 40%;
     }
 
-    .skills h4::after {
-        width: 3.3rem;
+    .skills h3::after {
+        width: 4.2rem;
         height: 1rem;
         margin-left: -60px;
-        // margin-top: 0.3rem;
+        margin-top: 0.7rem;
     }
 
     /* media queries for portfolio section */
     section.portfolio {
         padding-bottom: 40px;
     }
-    .portfolio h3::after {
-        width: 13.5rem;
+    .portfolio h2::after {
+        width: 15rem;
         height: 1.2rem;
         margin-left: -265px;
         margin-top: 0.6rem;
     }
 
+    ul.liveRepo li a {
+        font-size: 0.8rem;
+    }
+
     /* media queries for contact section */
-    .contact h3::after {
-        width: 10.8rem;
+    .contact h2::after {
+        width: 12.3rem;
         height: 1.2rem;
         margin-left: -210px;
         margin-top: 0.6rem;
@@ -127,5 +132,122 @@
         }
     }
 
+    /* media queries for footer */
+    p.creativeDesign {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
 
+    p.designInsp {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 645px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    .nameDiv h1 {
+        font-size: 3rem;
+
+        &::after {
+            width: 18rem;
+            margin-left: -305px;
+            margin-top: 1.5rem;
+            height: 2.5rem;
+        }
+    }
+
+    // media queries for about section
+    .aboutMe {
+        flex-direction: column-reverse;
+
+        .imgContainer {
+            width: 50%;
+        }
+
+        .bio {
+            width: 100%;
+        }
+    }
+
+    // media queries for footer
+    .creativeLicense {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    h1.hello {
+        animation: blink 0.5s step-end infinite;
+    }
+
+    h1.animate__animated {
+        display: none;
+    }    
+
+    h1.mobileH1 {
+        display: flex;
+
+        &::after {
+            margin-left: -288px;
+        }
+    }
+
+    /* media queries for form */
+    fieldset .senderInfo {
+        flex-direction: column;
+
+        input {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h1.mobileH1 {
+        font-size: 2rem;
+
+        &::after {
+            width: 11.5rem;
+            margin-left: -190px;
+            margin-top: 1rem;
+            height: 1.8rem;
+        }
+    }
+}
+
+@media (max-width:475px) {
+    /* media queries for nav */
+    .mobileNav i {
+        font-size: 1.5rem;
+    }
+
+    /* media queries for form */
+    fieldset {
+        width: 350px;
+    }
+}
+
+@media (max-width:390px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 350px) {
+    /* media queries for portfolop section */
+    ul.liveRepo li a {
+        font-size: 0.6rem;
+    }
+
+    /* media queries for form */
+    fieldset {
+        width: 315px;
+    }
 }

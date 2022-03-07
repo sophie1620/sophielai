@@ -490,6 +490,10 @@ h1.hello {
           animation: typing 3.5s steps(30, end), blink 0.5s step-end infinite;
 }
 
+h1.mobileH1 {
+  display: none;
+}
+
 /* The typing effect */
 @-webkit-keyframes typing {
   from {
@@ -730,10 +734,6 @@ ul.skillsUsed li i {
   font-size: 1.4rem;
 }
 
-section.contact {
-  border: 1px solid rebeccapurple;
-}
-
 .contact h2::after {
   content: "";
   width: 16rem;
@@ -885,14 +885,14 @@ p.designInspo {
     font-size: 6.5rem;
   }
 
-  h2 {
-    font-size: 3rem;
+  .nameDiv h1 {
+    font-size: 5rem;
   }
-  h2::after {
-    width: 16rem;
-    margin-left: -305px;
-    margin-top: 1.2rem;
-    height: 2rem;
+  .nameDiv h1::after {
+    width: 30rem;
+    margin-left: -510px;
+    margin-top: 2.5rem;
+    height: 4rem;
   }
 
   fieldset {
@@ -913,25 +913,25 @@ p.designInspo {
     font-size: 5rem;
   }
 
-  h2 {
-    font-size: 2rem;
+  .nameDiv h1 {
+    font-size: 4rem;
   }
-  h2::after {
-    width: 10.5rem;
-    margin-left: -205px;
-    margin-top: 0.8rem;
-    height: 1.5rem;
+  .nameDiv h1::after {
+    width: 24rem;
+    margin-left: -410px;
+    margin-top: 2rem;
+    height: 3.5rem;
   }
 
-  h3 {
+  h2 {
     font-size: 1.5rem;
   }
 
-  h4 {
+  h3 {
     font-size: 1.3rem;
   }
 
-  h5 {
+  h4 {
     font-size: 1rem;
   }
 
@@ -947,6 +947,7 @@ p.designInspo {
   /* media queries for the nav section */
   nav {
     position: static;
+    padding: 0;
   }
   nav ul.desktopNav {
     display: none;
@@ -962,8 +963,8 @@ nav label.mobileNav {
   }
 
   /* media queries for about section */
-  .aboutMe h3::after {
-    width: 7rem;
+  .aboutMe h2::after {
+    width: 8.3rem;
     height: 1.2rem;
     margin-left: -135px;
     margin-top: 0.6rem;
@@ -973,10 +974,11 @@ nav label.mobileNav {
     width: 40%;
   }
 
-  .skills h4::after {
-    width: 3.3rem;
+  .skills h3::after {
+    width: 4.2rem;
     height: 1rem;
     margin-left: -60px;
+    margin-top: 0.7rem;
   }
 
   /* media queries for portfolio section */
@@ -984,16 +986,20 @@ nav label.mobileNav {
     padding-bottom: 40px;
   }
 
-  .portfolio h3::after {
-    width: 13.5rem;
+  .portfolio h2::after {
+    width: 15rem;
     height: 1.2rem;
     margin-left: -265px;
     margin-top: 0.6rem;
   }
 
+  ul.liveRepo li a {
+    font-size: 0.8rem;
+  }
+
   /* media queries for contact section */
-  .contact h3::after {
-    width: 10.8rem;
+  .contact h2::after {
+    width: 12.3rem;
     height: 1.2rem;
     margin-left: -210px;
     margin-top: 0.6rem;
@@ -1005,5 +1011,119 @@ nav label.mobileNav {
   .messageForm .thankYouMsg {
     width: 450px;
     padding-bottom: 40px;
+  }
+
+  /* media queries for footer */
+  p.creativeDesign {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+
+  p.designInsp {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 645px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .nameDiv h1 {
+    font-size: 3rem;
+  }
+  .nameDiv h1::after {
+    width: 18rem;
+    margin-left: -305px;
+    margin-top: 1.5rem;
+    height: 2.5rem;
+  }
+
+  .aboutMe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .aboutMe .imgContainer {
+    width: 50%;
+  }
+  .aboutMe .bio {
+    width: 100%;
+  }
+
+  .creativeLicense {
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  h1.hello {
+    -webkit-animation: blink 0.5s step-end infinite;
+            animation: blink 0.5s step-end infinite;
+  }
+
+  h1.animate__animated {
+    display: none;
+  }
+
+  h1.mobileH1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  h1.mobileH1::after {
+    margin-left: -288px;
+  }
+
+  /* media queries for form */
+  fieldset .senderInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  fieldset .senderInfo input {
+    width: 100%;
+  }
+}
+@media (max-width: 520px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h1.mobileH1 {
+    font-size: 2rem;
+  }
+  h1.mobileH1::after {
+    width: 11.5rem;
+    margin-left: -190px;
+    margin-top: 1rem;
+    height: 1.8rem;
+  }
+}
+@media (max-width: 475px) {
+  /* media queries for nav */
+  .mobileNav i {
+    font-size: 1.5rem;
+  }
+
+  /* media queries for form */
+  fieldset {
+    width: 350px;
+  }
+}
+@media (max-width: 390px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 350px) {
+  /* media queries for portfolop section */
+  ul.liveRepo li a {
+    font-size: 0.6rem;
+  }
+
+  /* media queries for form */
+  fieldset {
+    width: 315px;
   }
 }
