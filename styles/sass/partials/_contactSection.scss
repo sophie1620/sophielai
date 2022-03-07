@@ -3,14 +3,14 @@ section.contact {
     height: auto;
 }
 
-.contact h3::after {
+.contact h2::after {
     content:'';
-    width: 14.5rem;
+    width: 16rem;
     height: 1.5rem;
     background: $primaryLight;
     display: inline;
     margin-left: -280px;
-    margin-top: 0.7rem;
+    margin-top: 1rem;
     z-index: -10;
 }
 
@@ -18,9 +18,47 @@ section.contact {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 40px 0 150px;
 
     .thankYouMsg {
-        width: 30%;
+        width: 40%;
+        padding: 0 1rem;
+        // border: 1px solid red;
+
+        h3 {
+            margin-top: 10px;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+ul.contactLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 30px;
+    
+    li {
+        width: calc(100% / 3);
+        text-align: center;
+
+        i {
+            font-size: 1.5rem;
+            border: 1px solid transparent;
+            padding: 5px;
+
+            &:hover {
+                color: $secondary;
+            }
+
+            &:focus {
+                border: 1px dotted $secondary;
+            }
+        }
     }
 }
 
@@ -31,12 +69,13 @@ fieldset{
     justify-content: center;
     width: 100%;
     margin: 0 auto;
-    padding-bottom: 100px;
+    // padding-bottom: 100px;
 
     .senderInfo {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     label,
@@ -45,10 +84,15 @@ fieldset{
         margin-bottom: 0.8rem;
         padding: 0.5rem;
         border-radius: 10px;
+        background-color: $tertiaryLight;
     }
 
-    input {
-        width: 50%;
+    input[type="text"] {
+        width: 40%;
+    }
+
+    input[type="email"] {
+        width: 55%;
     }
 
     textarea {

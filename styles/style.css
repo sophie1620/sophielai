@@ -318,7 +318,7 @@ h1 span.accentDot {
   color: #EBB859;
 }
 
-h2 {
+.nameDiv h1 {
   font-family: "Ubuntu", sans-serif;
   color: #4E4941;
   font-size: 4rem;
@@ -330,7 +330,7 @@ h2 {
           justify-content: center;
 }
 
-h3 {
+h2 {
   font-family: "Ubuntu", sans-serif;
   color: #4E4941;
   font-size: 2rem;
@@ -339,10 +339,10 @@ h3 {
   display: flex;
 }
 
-h4 {
+h3 {
   font-family: "Ubuntu", sans-serif;
   color: #4E4941;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,7 +351,7 @@ h4 {
           justify-content: center;
 }
 
-h5 {
+h4 {
   font-family: "Ubuntu", sans-serif;
   color: #4E4941;
   font-size: 1.2rem;
@@ -378,7 +378,7 @@ a {
 
 i {
   color: black;
-  font-size: 2.2rem;
+  font-size: 3rem;
 }
 
 nav {
@@ -389,7 +389,8 @@ nav {
   z-index: 50;
 }
 nav .mobileNav,
-nav i.mobileNav {
+nav label.mobileNav,
+nav ul.mobileNavMenu {
   display: none;
 }
 nav ul.desktopNav {
@@ -411,9 +412,65 @@ nav ul.desktopNav a:hover {
   border-bottom: 3px solid #7D9276;
 }
 
+/* pop-put menu for mobileNavMenu */
+input[type=checkbox] {
+  opacity: 0;
+  position: relative;
+  left: 90%;
+}
+input[type=checkbox]:checked ~ .mobileNavMenu {
+  display: block;
+  position: fixed;
+}
+
+i.fa-bars,
+i.fa-times {
+  background-color: #EBB85980;
+  padding: 10px;
+  border-radius: 10px;
+  width: 51.5px;
+  text-align: center;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  position: fixed;
+}
+
+ul.mobileNavMenu {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 120px;
+  background-color: #EBB85980;
+  padding: 0 10px;
+  border-radius: 10px;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+ul.mobileNavMenu li {
+  text-align: right;
+  padding: 10px 0 10px;
+  border-bottom: 1px solid transparent;
+}
+ul.mobileNavMenu li:hover {
+  border-bottom: 2px solid #7D9276;
+}
+ul.mobileNavMenu li:focus {
+  border: 1px dotted #7D9276;
+}
+
 header {
   padding-top: 2rem;
-  height: 90vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -422,7 +479,7 @@ header {
           align-items: center;
 }
 
-h1 {
+h1.hello {
   width: 60%;
   overflow: hidden;
   border-right: 0.03em solid #7D9276;
@@ -467,36 +524,36 @@ h1 {
     border-color: #7D9276;
   }
 }
-h2::after {
+.nameDiv h1::after {
   content: "";
-  width: 21rem;
+  width: 24rem;
   height: 3rem;
   background: #EBB85980;
   display: inline;
   margin-left: -410px;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   z-index: -10;
   -webkit-transition: 4s ease-in;
   transition: 4s ease-in;
 }
 
-.h2div {
+.nameDiv {
   height: 8rem;
   border: 1px solid transparent;
 }
 
 section.about {
-  height: auto;
+  padding-top: 2rem;
 }
 
-.aboutMe h3::after {
+.aboutMe h2::after {
   content: "";
-  width: 9.5rem;
+  width: 11rem;
   height: 1.5rem;
   background: #EBB85980;
   display: inline;
   margin-left: -180px;
-  margin-top: 0.7rem;
+  margin-top: 1rem;
   z-index: -10;
 }
 
@@ -516,14 +573,14 @@ section.about {
   width: 70%;
 }
 
-.skills h4::after {
+.skills h3::after {
   content: "";
-  width: 4rem;
+  width: 5.5rem;
   height: 1.2rem;
   background: #EBB85980;
   display: inline;
-  margin-left: -70px;
-  margin-top: 0.5rem;
+  margin-left: -85px;
+  margin-top: 0.9rem;
   z-index: -10;
 }
 
@@ -542,23 +599,29 @@ section.about {
       flex-wrap: wrap;
 }
 .skills ul li {
-  width: 3.5rem;
+  width: 5rem;
   text-align: center;
+  padding: 5px;
+  margin: 10px;
+}
+.skills ul li p {
+  text-align: center;
+  font-size: 0.8rem;
 }
 
 section.portfolio {
-  padding: 0 0 3rem;
+  padding: 2rem 0 3rem;
   margin-top: 100px;
 }
 
-.portfolio h3::after {
+.portfolio h2::after {
   content: "";
-  width: 18rem;
+  width: 19.5rem;
   height: 1.5rem;
   background: #EBB85980;
   display: inline;
   margin-left: -350px;
-  margin-top: 0.7rem;
+  margin-top: 1rem;
   z-index: -10;
 }
 
@@ -581,7 +644,7 @@ section.portfolio {
   border-radius: 10px;
   border: 5px solid #7D9276;
   background-color: #7D927680;
-  padding: 45px 0.5rem 20spx;
+  padding: 45px 0.5rem 20px;
   margin: 1rem;
 }
 .portfolio ul li.projectContainer:hover {
@@ -591,10 +654,10 @@ section.portfolio {
           transform: scale(1.03);
 }
 
-.productLinks h5 {
+.productLinks h4 {
   margin: 0 0 1rem;
 }
-.productLinks ul {
+.productLinks ul.liveRepo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -607,10 +670,19 @@ section.portfolio {
           justify-content: space-between;
   width: 60%;
   margin: 0 auto 1rem;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
 }
-.productLinks ul li {
+.productLinks ul.liveRepo li {
   width: 40%;
   text-align: center;
+  border: 3px solid #EBB859;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #FBF6EA;
+}
+.productLinks ul.liveRepo li:hover, .productLinks ul.liveRepo li:focus {
+  border: 3px solid #7D9276;
 }
 
 .product .imgContainer {
@@ -635,7 +707,7 @@ section.portfolio {
   font-size: 0.7rem;
 }
 
-.skillsUsed ul {
+ul.skillsUsed {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -649,16 +721,12 @@ section.portfolio {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.skillsUsed ul li {
+ul.skillsUsed li {
   text-align: center;
-  width: 80px;
+  width: 30px;
   margin: 0.5rem;
-  border: 3px solid #EBB859;
-  padding: 5px;
-  border-radius: 20px;
-  background-color: #FBF6EA;
 }
-.skillsUsed ul li i {
+ul.skillsUsed li i {
   font-size: 1.4rem;
 }
 
@@ -666,14 +734,14 @@ section.contact {
   height: auto;
 }
 
-.contact h3::after {
+.contact h2::after {
   content: "";
-  width: 14.5rem;
+  width: 16rem;
   height: 1.5rem;
   background: #EBB85980;
   display: inline;
   margin-left: -280px;
-  margin-top: 0.7rem;
+  margin-top: 1rem;
   z-index: -10;
 }
 
@@ -688,9 +756,51 @@ section.contact {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 40px 0 150px;
 }
 .messageForm .thankYouMsg {
-  width: 30%;
+  width: 40%;
+  padding: 0 1rem;
+}
+.messageForm .thankYouMsg h3 {
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+
+ul.contactLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+ul.contactLinks li {
+  width: 33.3333333333%;
+  text-align: center;
+}
+ul.contactLinks li i {
+  font-size: 1.5rem;
+  border: 1px solid transparent;
+  padding: 5px;
+}
+ul.contactLinks li i:hover {
+  color: #7D9276;
+}
+ul.contactLinks li i:focus {
+  border: 1px dotted #7D9276;
 }
 
 fieldset {
@@ -707,7 +817,6 @@ fieldset {
           justify-content: center;
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 100px;
 }
 fieldset .senderInfo {
   display: -webkit-box;
@@ -717,9 +826,11 @@ fieldset .senderInfo {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 fieldset label,
 fieldset input,
@@ -727,9 +838,13 @@ fieldset textarea {
   margin-bottom: 0.8rem;
   padding: 0.5rem;
   border-radius: 10px;
+  background-color: #FBF6EA4D;
 }
-fieldset input {
-  width: 50%;
+fieldset input[type=text] {
+  width: 40%;
+}
+fieldset input[type=email] {
+  width: 55%;
 }
 fieldset textarea {
   resize: none;
@@ -749,38 +864,9 @@ footer i {
   color: #F9F7F6;
 }
 
-.footerContactLinks,
 .creativeLicense {
   width: 40%;
   margin: 0 auto;
-}
-
-.footerContactLinks ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.footerContactLinks ul li {
-  width: 33.3333333333%;
-  text-align: center;
-}
-.footerContactLinks ul li i {
-  font-size: 1.5rem;
-  border: 1px solid transparent;
-  padding: 5px;
-}
-.footerContactLinks ul li i:hover {
-  color: #7D9276;
-}
-.footerContactLinks ul li i:focus {
-  border: 1px dotted #7D9276;
 }
 
 p.creativeDesign {
@@ -866,16 +952,13 @@ p.designInspo {
     display: none;
   }
   nav .mobileNav,
-nav i.mobileNav {
+nav label.mobileNav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-  }
-  nav i.mobileNav {
-    position: fixed;
   }
 
   /* media queries for about section */

@@ -1,23 +1,23 @@
 const sophie = {};
 
 sophie.init = function() {
+    sophie.mobileNav();
+    sophie.nameElement();
     sophie.form();
-
-    sophie.h2Element();
 } //end of init function
 
 
 
 // delay h2 entrance
-sophie.h2Element = () => {
-    const h2Element = document.createElement('h2');
-    h2Element.textContent = `I'm Sophie!`;
+sophie.nameElement = () => {
+    const h1Element = document.createElement('h1');
+    h1Element.textContent = `I'm Sophie!`;
 
-    h2Element.classList.add('animate__animated', 'animate__fadeInLeft');
+    h1Element.classList.add('animate__animated', 'animate__fadeInLeft');
 
     setTimeout( () => {
-        const h2div = document.querySelector('.h2div');
-        h2div.appendChild(h2Element);
+        const nameDiv = document.querySelector('.nameDiv');
+        nameDiv.appendChild(h1Element);
 
     }, 3500);
 }
@@ -47,6 +47,32 @@ sophie.form = () => {
         fieldset.append(p2Element);
 
     })
+}
+
+// mobile menu 
+sophie.mobileNav = () => {
+    const label = document.querySelector('label[for=mobileNav]');
+
+    const checkbox = document.querySelector('input[type=checkbox]');
+    
+    const handleClick = () => {
+        label.addEventListener('click', function(e){
+        console.log('e', e.target);
+        
+            if (e.target.tagName === "I") {
+                closeIcon(e.target);
+            }
+        
+            function closeIcon(icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        })
+    }
+
+    if (checkbox.checked) {
+        handleClick();
+    }
 }
 
 sophie.init();

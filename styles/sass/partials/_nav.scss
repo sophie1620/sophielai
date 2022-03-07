@@ -7,7 +7,8 @@ nav {
     z-index: 50;
     
     .mobileNav, 
-    i.mobileNav {
+    label.mobileNav, 
+    ul.mobileNavMenu {
         display: none;
     }
     
@@ -25,3 +26,55 @@ nav {
         }
     }
 }
+
+/* pop-put menu for mobileNavMenu */
+input[type="checkbox"] {
+    opacity: 0;
+    position: relative;
+    left: 90%;
+
+    &:checked ~ .mobileNavMenu {
+        display: block;
+        position: fixed;
+    }
+}
+
+i.fa-bars, 
+i.fa-times {
+    background-color: $primaryLight;
+    padding: 10px;
+    border-radius: 10px;
+    width: 51.5px;
+    text-align: center;
+    transition: 1.5s;
+    position: fixed;
+}
+
+ul.mobileNavMenu {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 120px;
+    background-color: $primaryLight;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: 2s;
+
+    li {
+        text-align: right;
+        padding: 10px 0 10px;
+        border-bottom: 1px solid transparent;
+
+        &:hover{
+            border-bottom: 2px solid $secondary;
+        }
+
+        &:focus {
+            border: 1px dotted $secondary;
+        }
+    }
+}
+

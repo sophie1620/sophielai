@@ -32,9 +32,11 @@
             <li> <a href="#contact">contact</a> </li>
         </ul>
 
-        <input type="checkbox" name="nav" id="nav" class="mobileNav">
-        <i class="fas fa-bars mobileNav wrapper"></i>
-        <ul class="mobileNav wrapper">
+        <input type="checkbox" name="mobileNav" id="mobileNav" class="mobileNav">
+
+        <label for="mobileNav" class="mobileNav wrapper"><i class="fas fa-bars menuIcon"></i></label>
+
+        <ul class="mobileNavMenu wrapper">
             <li> <a href="#about">about</a> </li>
             <li> <a href="#portfolio">portfolio</a> </li>
             <li> <a href="#contact">contact</a> </li>
@@ -43,8 +45,8 @@
     <!-- header -->
     <header>
         <div class="wrapper">
-            <h1>hello<span class="accentDot">.</span></h1>
-            <div class="h2div"></div>
+            <h1 class="hello">hello<span class="accentDot">,</span></h1>
+            <div class="nameDiv"></div>
             <!-- <h2 class="animate__animated animate__fadeInLeft">I'm Sophie!</h2> -->
         </div>
     </header> <!-- end of header -->
@@ -55,7 +57,7 @@
         <section id="about" class="about wrapper">
             <div class="aboutMe">
                 <div class="bio">
-                <h3>About Me</h3>
+                <h2>About Me</h2>
                     <div class="pContainer">
                         <p>I'm a front-end developer and a graduate of Juno College's Web Development Bootcamp.  I create responsive and inclusive websites that are accessible to all. I use my teaching background to ensure that the websites are user-friendly and intuitive. </p>
                         
@@ -67,39 +69,39 @@
                 </div>
             </div> <!-- end of .aboutMe -->
             <div class="skills">
-                <h4>Skills</h4>
+                <h3>Skills</h3>
                 <ul class="skills">
                     <li>
                         <i class="fab fa-html5" title="HTML5"></i>
-                        <span class="sr-only">HTML5</span>
+                        <p>HTML5</p>
                     </li>
                     <li>
                         <i class="fab fa-css3-alt" title="CSS3"></i>
-                        <span class="sr-only">CSS3</span>
+                        <p>CSS3</p>
                     </li>
                     <li>
                         <i class="fab fa-sass" title="SASS"></i>
-                        <span class="sr-only">SASS</span>
+                        <p>SASS</p>
                     </li>
                     <li>
                         <i class="fab fa-js-square" title="JavaScript"></i>
-                        <span class="sr-only">JavaScript</span>
+                        <p>JavaScript</p>
                     </li>
                     <li>
                         <i class="devicon-jquery-plain-wordmark" title="jQuery"></i>
-                        <span class="sr-only">jQuery</span>
+                        <p>jQuery</p>
                     </li>
                     <li>
                         <i class="fab fa-react" title="React"></i>
-                        <span class="sr-only">React</span>
+                        <p>React</p>
                     </li>
                     <li>
                         <i class="fab fa-git-square" title="Git"></i>
-                        <span class="sr-only">Git</span>
+                        <p>Git</p>
                     </li>
                     <li>
-                        <i class="fas fa-cog" title="RESTful API"></i>
-                        <span class="sr-only">RESTful API</span>
+                        <i class="fas fa-cogs" title="RESTful API"></i>
+                        <p>RESTful API</p>
                     </li>
                 </ul>
             </div> <!-- end of .skills -->   
@@ -107,13 +109,13 @@
 
         <!-- portfolio section -->
         <section id="portfolio" class="portfolio wrapper">
-            <h3>Sophie's Creations</h3>
+            <h2>Sophie's Creations</h2>
             <div class="portfolio">
                 <ul>
                     <li class="projectContainer">
                         <div class="productLinks">
-                            <h5>Sanctuary Helpers</h5>
-                            <ul>
+                            <h4>Sanctuary Helpers</h4>
+                            <ul class="liveRepo">
                                 <li><a href="https://sleepy-spence-a465b9.netlify.app/" target="blank">live</a></li>
                                 <li><a href="https://github.com/sophie1620/sophie-lai-project01" target="blank">repo</a></li>
                             </ul>
@@ -126,33 +128,27 @@
                                 <div class="projectDescription">
                                     <p>Multipage e-commerce website for Sanctuary Helpers.</p>
                                 </div> <!-- end of .projectDescription -->
-                                <div class="skillsUsed">
-                                    <ul>
-                                        <li>
-                                            <i class="fab fa-html5" title="HTML5"></i>
-                                            <span class="sr-only">HTML5</span>
-                                        </li>
-                                        <li>
-                                            <i class="fab fa-css3-alt" title="CSS3"></i>
-                                            <span class="sr-only">CSS3</span>
-                                        </li>
-                                        <li>
-                                            <i class="fab fa-sass" title="SASS"></i>
-                                            <span class="sr-only">SASS</span>
-                                        </li>
-                                        <li>
-                                            <i class="fab fa-git-square" title="Git"></i>
-                                            <span class="sr-only">Git</span>
-                                        </li>
-                                    </ul>
-                                </div> <!-- end of .skillsUsed -->
+                                <ul class="skillsUsed">
+                                    <li>
+                                        <i class="fab fa-html5" title="HTML5"></i>
+                                        <span class="sr-only">HTML5</span>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-sass" title="SASS"></i>
+                                        <span class="sr-only">SASS</span>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-git-square" title="Git"></i>
+                                        <span class="sr-only">Git</span>
+                                    </li>
+                                </ul> <!-- end of .skillsUsed -->
                             </div> <!-- end of .projectDetails -->
                         </div>
                     </li>
                     <li class="projectContainer"> <!-- project 2 details -->
                         <div class="productLinks">
-                            <h5>Weather to Run (or Not)</h5>
-                            <ul>
+                            <h4>Weather to Run (or Not)</h4>
+                            <ul class="liveRepo">
                                 <li><a href="https://hardcore-euler-3fd3cd.netlify.app/" target="blank">live</a></li>
                                 <li><a href="https://github.com/sophie1620/project-02" target="blank">repo</a></li>
                             </ul>
@@ -165,41 +161,35 @@
                                 <div class="projectDescription">
                                     <p>RESTful API App designed to help runners be prepared for outdoor running based on weather conditions</p>
                                 </div> <!-- end of .projectDescription -->
-                                <div class="skillsUsed">
-                                    <ul>
-                                        <li>
-                                            <i class="fab fa-html5" title="HTML5"></i>
-                                            <span class="sr-only">HTML5</span>
-                                        </li>
-                                        <li>
-                                            <i class="fab fa-css3-alt" title="CSS3"></i>
-                                            <span class="sr-only">CSS3</span>
-                                        </li>
-                                        <li>
-                                            <i class="fab fa-sass" title="SASS"></i>
-                                            <span class="sr-only">SASS</span>
-                                        </li>
-                                        <li>
-                                            <i class="fab fa-js-square" title="JavaScript"></i>
-                                            <span class="sr-only">JavaScript</span>
-                                        </li>
-                                        <li>
-                                            <i class="fab fa-git-square" title="Git"></i>
-                                            <span class="sr-only">Git</span>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-cog" title="RESTful API"></i>
-                                            <span class="sr-only">RESTful API</span>
-                                        </li>
-                                    </ul>
-                                </div> <!-- end of .skillsUsed -->
+                                <ul class="skillsUsed">
+                                    <li>
+                                        <i class="fab fa-html5" title="HTML5"></i>
+                                        <span class="sr-only">HTML5</span>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-sass" title="SASS"></i>
+                                        <span class="sr-only">SASS</span>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-js-square" title="JavaScript"></i>
+                                        <span class="sr-only">JavaScript</span>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-git-square" title="Git"></i>
+                                        <span class="sr-only">Git</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-cogs" title="RESTful API"></i>
+                                        <span class="sr-only">RESTful API</span>
+                                    </li>
+                                </ul> <!-- end of .skillsUsed -->
                             </div> <!-- end of .projectDetails -->
                         </div>
                     </li>
                     <li class="projectContainer"> <!-- project 3 details -->
                         <div class="productLinks">
-                            <h5>Project 3</h5>
-                            <ul>
+                            <h4>Project 3</h4>
+                            <ul class="liveRepo">
                                 <li><a href="#" target="blank">live</a></li>
                                 <li><a href="#" target="blank">repo</a></li>
                             </ul>
@@ -212,38 +202,33 @@
                                 <div class="projectDescription">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum alias cum nesciunt officia, provident totam.</p>
                                 </div> <!-- end of .projectDescription -->
-                                <div class="skillsUsed">
-                                    <ul>
-                                        <li>
-                                            <i class="fab fa-html5" title="HTML5"></i>
-                                            <span class="sr-only">HTML5</span>
-                                        </li>
-                                        <li>
-                                            <i class="fab fa-css3-alt" title="CSS3"></i>
-                                            <span class="sr-only">CSS3</span>
-                                        </li>
-                                        <li>
-                                            <i class="fab fa-sass" title="SASS"></i>
-                                            <span class="sr-only">SASS</span>
-                                        </li>
-                                        <li>
-                                            <i class="fab fa-js-square" title="JavaScript"></i>
-                                            <span class="sr-only">JavaScript</span>
-                                        </li>
-                                        <li>
-                                            <i class="fab fa-react" title="React"></i>
-                                            <span class="sr-only">React</span>
-                                        </li>
-                                        <li>
-                                            <i class="fab fa-git-square" title="Git"></i>
-                                            <span class="sr-only">Git</span>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-cog" title="RESTful API"></i>
-                                            <span class="sr-only">RESTful API</span>
-                                        </li>
-                                    </ul>
-                                </div> <!-- end of .skillsUsed -->
+
+                                <ul class="skillsUsed">
+                                    <li>
+                                        <i class="fab fa-html5" title="HTML5"></i>
+                                        <span class="sr-only">HTML5</span>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-sass" title="SASS"></i>
+                                        <span class="sr-only">SASS</span>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-js-square" title="JavaScript"></i>
+                                        <span class="sr-only">JavaScript</span>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-react" title="React"></i>
+                                        <span class="sr-only">React</span>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-git-square" title="Git"></i>
+                                        <span class="sr-only">Git</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-cog" title="RESTful API"></i>
+                                        <span class="sr-only">RESTful API</span>
+                                    </li>
+                                </ul> <!-- end of .skillsUsed -->
                             </div> <!-- end of .projectDetails -->
                         </div>
                     </li>
@@ -254,12 +239,33 @@
 
         <!-- contact me section -->
         <section id="contact" class="contact wrapper">
-            <h3>Contact Sophie</h3>
+            <h2>Contact Sophie</h2>
 
             <div class="messageForm">
                 <div class="thankYouMsg">
-                    <h5>Thanks for visiting!</h4>
+                    <h3>Thanks for visiting!</h3>
                     <p>If you would like to connect or learn more about me and my work, please send me an email or LinkedIn message!</p>
+
+                    <ul class="contactLinks">
+                        <li>
+                            <a href="mailto:sophie1620@gmail.com">
+                                <i class="fas fa-envelope" title="Send me an email!"></i>
+                                <span class="sr-only">send Sophie an email</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/sophie-lai-5407879b/" target="blank">
+                                <i class="fab fa-linkedin" title="Visit my LinkedIn profile"></i>
+                                <span class="sr-only">link to Sophie's LinkedIn profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/sophie1620" target="blank">
+                                <i class="fab fa-github" title="Visit my GitHub repos"></i>
+                                <span class="sr-only">link to Sophie's GitHub repo</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
                 <form action="https://formspree.io/f/mdobzzbr" method=""POST">
@@ -288,28 +294,6 @@
     <!-- footer -->
     <footer>
         <div class="wrapper">
-            <div class="footerContactLinks">
-                <ul>
-                    <li>
-                        <a href="mailto:sophie1620@gmail.com">
-                            <i class="fas fa-envelope" title="Send me an email!"></i>
-                            <span class="sr-only">send Sophie an email</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/sophie-lai-5407879b/" target="blank">
-                            <i class="fab fa-linkedin" title="Visit my LinkedIn profile"></i>
-                            <span class="sr-only">link to Sophie's LinkedIn profile</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/sophie1620" target="blank">
-                            <i class="fab fa-github" title="Visit my GitHub repos"></i>
-                            <span class="sr-only">link to Sophie's GitHub repo</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
             <div class="creativeLicense">
                 <p class="creativeDesign">created and designed by sophie lai</p>
                 <p class="designInspo">design inspired by Adveits</p>

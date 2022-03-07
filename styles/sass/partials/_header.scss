@@ -1,12 +1,12 @@
 header {
     padding-top: 2rem;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
 }
 
 // typewriter effect
-h1 {
+h1.hello {
     width: 60%;
     overflow: hidden;
     border-right: .03em solid $secondary;
@@ -30,19 +30,19 @@ h1 {
     50% { border-color: $secondary }
 }
 
-h2::after {
+.nameDiv h1::after {
     content:'';
-    width: 21rem;
+    width: 24rem;
     height: 3rem;
     background: $primaryLight;
     display: inline;
     margin-left: -410px;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     z-index: -10;
     transition: 4s ease-in;
 }
 
-.h2div {
+.nameDiv {
     height: 8rem;
     border: 1px solid transparent;
 }

@@ -1,16 +1,15 @@
 section.about {
-    // height: 90vh;
-    height: auto;
+    padding-top: 2rem;
 }
 
-.aboutMe h3::after {
+.aboutMe h2::after {
     content:'';
-    width: 9.5rem;
+    width: 11rem;
     height: 1.5rem;
     background: $primaryLight;
     display: inline;
     margin-left: -180px;
-    margin-top: 0.7rem;
+    margin-top: 1rem;
     z-index: -10;
 }
 
@@ -24,14 +23,14 @@ section.about {
     }
 }
 
-.skills h4::after {
+.skills h3::after {
     content:'';
-    width: 4rem;
+    width: 5.5rem;
     height: 1.2rem;
     background: $primaryLight;
     display: inline;
-    margin-left: -70px;
-    margin-top: 0.5rem;
+    margin-left: -85px;
+    margin-top: 0.9rem;
     z-index: -10;
 }
 
@@ -42,7 +41,14 @@ section.about {
     flex-wrap: wrap;
 
     li {
-        width: 3.5rem;
+        width: 5rem;
         text-align: center;
+        padding: 5px;
+        margin: 10px;
+
+        p {
+            text-align: center;
+            font-size: 0.8rem;
+        }
     }
 }

@@ -74,14 +74,11 @@
         }
 
         .mobileNav, 
-        i.mobileNav {
+        label.mobileNav {
             display: flex;
             justify-content: flex-end;
         }
 
-        i.mobileNav {
-            position: fixed;
-        }
     }
 
 

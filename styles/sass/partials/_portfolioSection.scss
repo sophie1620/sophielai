@@ -1,17 +1,17 @@
 section.portfolio {
     // height: 90vh;
-    padding: 0 0 3rem;
+    padding: 2rem 0 3rem;
     margin-top: 100px;
 }
 
-.portfolio h3::after {
+.portfolio h2::after {
     content:'';
-    width: 18rem;
+    width: 19.5rem;
     height: 1.5rem;
     background: $primaryLight;
     display: inline;
     margin-left: -350px;
-    margin-top: 0.7rem;
+    margin-top: 1rem;
     z-index: -10;
 }
 
@@ -26,7 +26,7 @@ section.portfolio {
         border-radius: 10px;
         border: 5px solid $secondary;
         background-color: $secondaryLight;
-        padding: 45px 0.5rem 20spx;
+        padding: 45px 0.5rem 20px;
         margin: 1rem;
     }
 
@@ -39,20 +39,32 @@ section.portfolio {
 
 .productLinks {
 
-    h5 {
+    h4 {
         margin: 0 0 1rem;
     }
 
-    ul {
+    ul.liveRepo {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 60%;
         margin: 0 auto 1rem;
+        text-transform: uppercase;
+        font-family: $headerFont;
 
         li {
             width: 40%;
             text-align: center;
+            border: 3px solid $primary;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: $tertiary;
+
+            &:hover, 
+            &:focus {
+                border: 3px solid $secondary;
+                // background-color: $secondaryLight;
+            }
         }
     }
 }
@@ -80,7 +92,7 @@ section.portfolio {
         font-size: 0.7rem;
 }
 
-.skillsUsed ul {
+ul.skillsUsed {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -88,12 +100,9 @@ section.portfolio {
 
     li {
         text-align: center;
-        width: 80px;
+        width: 30px;
         margin: 0.5rem;
-        border: 3px solid $primary;
-        padding: 5px;
-        border-radius: 20px;
-        background-color: #FBF6EA;
+        
 
         i {
             font-size: 1.4rem;
