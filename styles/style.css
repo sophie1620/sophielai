@@ -731,7 +731,7 @@ ul.skillsUsed li i {
 }
 
 section.contact {
-  height: auto;
+  border: 1px solid rebeccapurple;
 }
 
 .contact h2::after {
@@ -980,6 +980,10 @@ nav label.mobileNav {
   }
 
   /* media queries for portfolio section */
+  section.portfolio {
+    padding-bottom: 40px;
+  }
+
   .portfolio h3::after {
     width: 13.5rem;
     height: 1.2rem;
@@ -993,5 +997,13 @@ nav label.mobileNav {
     height: 1.2rem;
     margin-left: -210px;
     margin-top: 0.6rem;
+  }
+
+  .messageForm {
+    padding-bottom: 40px;
+  }
+  .messageForm .thankYouMsg {
+    width: 450px;
+    padding-bottom: 40px;
   }
 }

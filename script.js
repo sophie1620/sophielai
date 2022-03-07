@@ -6,7 +6,29 @@ sophie.init = function() {
     sophie.form();
 } //end of init function
 
+// mobile menu 
+sophie.mobileNav = () => {
+    const label = document.querySelector('label[for=mobileNav]');
 
+    const checkbox = document.querySelector('input[type=checkbox]');
+
+    const handleClick = () => {
+        label.addEventListener('click', function(e) {
+            function closeIcon(icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+    
+            if (e.target.tagName === "I") {
+                closeIcon(e.target);
+            }
+        });
+    }
+
+    if (checkbox.checked !== true) {
+        handleClick();
+    }
+}
 
 // delay h2 entrance
 sophie.nameElement = () => {
@@ -47,32 +69,6 @@ sophie.form = () => {
         fieldset.append(p2Element);
 
     })
-}
-
-// mobile menu 
-sophie.mobileNav = () => {
-    const label = document.querySelector('label[for=mobileNav]');
-
-    const checkbox = document.querySelector('input[type=checkbox]');
-    
-    const handleClick = () => {
-        label.addEventListener('click', function(e){
-        console.log('e', e.target);
-        
-            if (e.target.tagName === "I") {
-                closeIcon(e.target);
-            }
-        
-            function closeIcon(icon) {
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-times');
-            }
-        })
-    }
-
-    if (checkbox.checked) {
-        handleClick();
-    }
 }
 
 sophie.init();
