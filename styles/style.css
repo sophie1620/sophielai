@@ -738,6 +738,10 @@ ul.skillsUsed li i {
   font-size: 1.4rem;
 }
 
+section.contact {
+  margin-top: 2rem;
+}
+
 .contact h2::after {
   content: "";
   width: 16rem;
