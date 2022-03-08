@@ -3,7 +3,7 @@
         font-size: 6.5rem;
     }
 
-    .nameDiv h1 {
+    h1.mobileH1 {
         font-size: 5rem;
 
         &::after {
@@ -229,6 +229,31 @@
     fieldset {
         width: 350px;
     }
+}
+
+@media (max-width: 414px) {
+    h1.mobileH1::after {
+        margin-left: -195px;
+    }
+
+    .aboutme h2::after {
+        margin-left: -140px;
+    }
+
+    .skills h3::after {
+        margin-left: -63px;
+        margin-top: 0.5rem;
+    }
+
+    .portfolio h2::after {
+        margin-left: -275px;
+    }
+
+    .contact h2::after {
+        margin-left: -220px;
+    }
+
+
 }
 
 @media (max-width:390px) {
