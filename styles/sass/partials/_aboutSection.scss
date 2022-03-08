@@ -20,6 +20,14 @@ section.about {
 
     .bio {
         width: 70%;
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .emoji {
+            font-size: 1.5rem;
+        }
     }
 }
 

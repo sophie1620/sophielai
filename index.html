@@ -23,6 +23,9 @@
     <!-- css animate -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
     <nav>
@@ -64,9 +67,10 @@
                 <div class="bio">
                     <h2>About Me</h2>
                     <div class="pContainer">
-                        <p>I'm a front-end developer and a graduate of Juno College's Web Development Bootcamp.  I create responsive and inclusive websites that are accessible to all. I use my teaching background and experience with lesson design to ensure that the websites are user-friendly and intuitive. </p>
+                        <p>I'm a front-end developer and a graduate of Juno College's Web Development Bootcamp.  I create responsive and inclusive websites that are accessible to all. I use my teaching background and experience with lesson design to ensure that the websites are user-friendly and intuitive.  I like to balance functionality with visual appeal, and inject a little bit of fun in what I do. <span class="emoji">☺️</span></p>
                         
-                        <p>Prior to my transition into web development, I taught English in South Korea and China.  I love interacting with different people and exploring new cities.  My ideal trip includes: visiting different cafés, eating different foods, sightseeing, and going on hikes.</p>
+                        <p>Prior to my transition into web development, I taught English in South Korea and China.  I love interacting with different people and exploring new cities.  My ideal trip includes: visiting different cafés, eating all foods, sightseeing, and going on hikes.  When I am not working or travelling, I enjoy running <span class="emoji">🏃🏻‍♀️</span>, reading <span class="emoji">📚</span>, drinking <span class="underline">more</span> coffee <span class="emoji">☕️</span>, and watching movies <span class="emoji">🎬🍿</span>.</p>
+                
                     </div> <!-- end of .pContainer-->
                 </div> <!-- end of .bio -->
                 <div class="imgContainer">
@@ -117,7 +121,7 @@
             <h2>Sophie's Creations</h2>
             <div class="portfolio">
                 <ul>
-                    <li class="projectContainer">
+                    <li class="projectContainer" data-aos="flip-left" data-aos-dalay="800" data-aos-duration="1200">
                         <div class="productLinks">
                             <h4>Sanctuary Helpers</h4>
                             <ul class="liveRepo">
@@ -150,7 +154,7 @@
                             </div> <!-- end of .projectDetails -->
                         </div>
                     </li>
-                    <li class="projectContainer"> <!-- project 2 details -->
+                    <li class="projectContainer" data-aos="flip-left" data-aos-dalay="1000" data-aos-duration="1200"> <!-- project 2 details -->
                         <div class="productLinks">
                             <h4>Weather to Run (or Not)</h4>
                             <ul class="liveRepo">
@@ -191,7 +195,7 @@
                             </div> <!-- end of .projectDetails -->
                         </div>
                     </li>
-                    <li class="projectContainer"> <!-- project 3 details -->
+                    <li class="projectContainer" data-aos="flip-left" data-aos-dalay="1200" data-aos-duration="1400"> <!-- project 3 details -->
                         <div class="productLinks">
                             <h4>Project 3</h4>
                             <ul class="liveRepo">
@@ -342,6 +346,12 @@
             }
         });
     </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 
     
 </body>

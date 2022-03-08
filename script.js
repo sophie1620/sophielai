@@ -4,6 +4,7 @@ sophie.init = function() {
     sophie.mobileNav();
     sophie.nameElement();
     sophie.scrollArrow();
+    // sophie.profilePic();
 } //end of init function
 
 // mobile menu 
@@ -54,4 +55,16 @@ sophie.scrollArrow = () => {
     }, 4500)
 }
 
+// sophie.profilePic = () => {
+//     const about = document.querySelector('#about');
+
+//     if()
+//     }
+
+//     about.addEventListener(scroll, function() {
+//         scrollAnimation();
+//     })
+// }
+
 sophie.init();
+aos.init();

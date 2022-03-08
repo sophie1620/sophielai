@@ -619,6 +619,12 @@ section.about {
 .aboutMe .bio {
   width: 70%;
 }
+.aboutMe .bio .underline {
+  text-decoration: underline;
+}
+.aboutMe .bio .emoji {
+  font-size: 1.5rem;
+}
 
 .skills h3::after {
   content: "";
