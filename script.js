@@ -4,6 +4,7 @@ sophie.init = function() {
     sophie.mobileNav();
     sophie.nameElement();
     sophie.scrollArrow();
+    // sophie.formValidation();
     sophie.form();
 } //end of init function
 
@@ -60,8 +61,7 @@ sophie.form = () => {
     const form = document.querySelector('form');
     const name = document.querySelector('#name');
     const fieldset = document.querySelector('fieldset');
-    console.log(fieldset);
-    
+
     
     form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -81,13 +81,34 @@ sophie.form = () => {
         const p2Element = document.createElement('p');
         p2Element.textContent = 'She will get back to you as soon as possible. ☺️';
         fieldset.append(p2Element);
-
     })
 }
 
 // form validation
-sophie.formValidation = () => {
-    
-}
+// sophie.formValidation = () => {
+//     const form = document.querySelector('form');
+//     const name = document.querySelector('input[name=name]');
+//     console.log(name);
+//     const userName = name.value;
+
+//     const email = document.querySelector('input[type=email]');
+//     console.log(email);
+//     const userEmail = email.value;
+
+//     const message = document.querySelector('textarea');
+//     console.log(message);
+//     const userM
+
+//     form.addEventListener('submit', function(e) {
+//         e.preventDefault();
+
+//         // if (userName && userEmail && userMessage) {
+//         //     sophie.form();
+//         // } else {
+//         //     alert(`Oops! It seems like you didn't fill out the entire form.  Please ensure all sections are completed so Sophie can respond to you.  Thank you!`);
+//         // }
+//     })
+
+// }
 
 sophie.init();
