@@ -45,6 +45,7 @@ sophie.nameElement = () => {
     }, 3500);
 }
 
+// scroll down arrow
 sophie.scrollArrow = () => {
     const icon = document.querySelector('.fa-solid');
     
@@ -59,6 +60,7 @@ sophie.form = () => {
     const form = document.querySelector('form');
     const name = document.querySelector('#name');
     const fieldset = document.querySelector('fieldset');
+    console.log(fieldset);
     
     
     form.addEventListener('submit', function(e) {
@@ -70,6 +72,8 @@ sophie.form = () => {
 
         fieldset.innerHTML = "";
 
+        fieldset.classList.add('thankYouBg');
+
         const pElement = document.createElement('p');
         pElement.textContent = `Thank you for sending Sophie an email, ${senderGreeting}!`;
         fieldset.append(pElement);
@@ -79,6 +83,11 @@ sophie.form = () => {
         fieldset.append(p2Element);
 
     })
+}
+
+// form validation
+sophie.formValidation = () => {
+    
 }
 
 sophie.init();
