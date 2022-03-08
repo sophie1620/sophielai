@@ -22,8 +22,20 @@ p.creativeDesign {
     line-height: 1.2;
 }
 
-p.designInspo {
+p.location {
     font-size: 0.8rem;
     line-height: 0;
     padding: 0;
+
+    a {
+        color: $backgroundColor;
+
+        &:hover {
+            color: $secondaryLight;
+        }
+
+        &:focus {
+            border: 1px dotted $secondary;
+        }
+    }
 }

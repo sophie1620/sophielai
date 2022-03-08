@@ -753,6 +753,11 @@ section.portfolio {
   font-size: 0.7rem;
 }
 
+.projectDescription a:hover,
+.projectDescription a:focus {
+  border-bottom: 1px solid black;
+}
+
 ul.skillsUsed {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -920,10 +925,19 @@ p.creativeDesign {
   line-height: 1.2;
 }
 
-p.designInspo {
+p.location {
   font-size: 0.8rem;
   line-height: 0;
   padding: 0;
+}
+p.location a {
+  color: #F9F7F6;
+}
+p.location a:hover {
+  color: #7D927680;
+}
+p.location a:focus {
+  border: 1px dotted #7D9276;
 }
 
 @media (max-width: 1080px) {

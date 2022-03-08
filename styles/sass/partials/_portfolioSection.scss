@@ -92,6 +92,11 @@ section.portfolio {
         font-size: 0.7rem;
 }
 
+.projectDescription a:hover, 
+.projectDescription a:focus {
+    border-bottom: 1px solid $fontColor;
+}
+
 ul.skillsUsed {
     display: flex;
     flex-direction: row;

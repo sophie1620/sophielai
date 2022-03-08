@@ -27,9 +27,9 @@
 <body>
     <nav>
         <ul class="desktopNav wrapper">
-            <li> <a href="#about">about</a> </li>
-            <li> <a href="#portfolio">portfolio</a> </li>
-            <li> <a href="#contact">contact</a> </li>
+            <li> <a href="#about">About</a> </li>
+            <li> <a href="#portfolio">Portfolio</a> </li>
+            <li> <a href="#contact">Contact</a> </li>
         </ul>
 
         <input type="checkbox" name="mobileNav" id="mobileNav" class="mobileNav">
@@ -164,7 +164,7 @@
                             </div>
                             <div class="projectDetails">
                                 <div class="projectDescription">
-                                    <p>RESTful API App designed to help runners be prepared for outdoor running based on weather conditions</p>
+                                    <p>RESTful API App designed to help runners be prepared for outdoor running based on weather conditions.  Created in collaboration with <a href="wwww.emilyreadscode.ca">Emily Read.</a></p>
                                 </div> <!-- end of .projectDescription -->
                                 <ul class="skillsUsed">
                                     <li>
@@ -281,6 +281,8 @@
                             
                             <label for="email" class="sr-only">Email</label>
                             <input type="email" name="email" id="email" placeholder="Email address" required>
+
+                            <input type="text" name="_gotcha" style="display:none" />
                         </div>
                         
                         <label for="message" class="sr-only">Message</label>
@@ -297,8 +299,8 @@
     <footer>
         <div class="wrapper">
             <div class="creativeLicense">
-                <p class="creativeDesign">created and designed by sophie lai</p>
-                <p class="designInspo">design inspired by Adveits</p>
+                <p class="creativeDesign">Created and Designed by Sophie Lai</p>
+                <p class="location"><a href="www.junocollege.com">@Juno College</a> 2022</p>
             </div>
         </div> <!-- end of .wrapper -->
     </footer> <!-- end of footer -->
@@ -306,6 +308,41 @@
     <script src="./script.js"></script>
 
     <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+    <script>
+        // connecting to formspree
+        window.formbutton = window.formbutton || function () { (formbutton.q = formbutton.q || []).push(arguments) };
+        /* customize formbutton below*/
+        formbutton("create", {
+            action: "https://formspree.io/f/mdobzzbr",
+            title: "👋🏻 Send Sophie a message!",
+            fields: [
+                {
+                    type: "email",
+                    label: "Email:",
+                    name: "email",
+                    required: true,
+                    placeholder: "your@email.com"
+                },
+                {
+                    type: "textarea",
+                    label: "Message:",
+                    name: "message",
+                    required: true,
+                    placeholder: "Your message",
+                },
+                { type: "submit" }
+            ],
+            styles: {
+                title: {
+                    backgroundColor: "#EBB859"
+                },
+                button: {
+                    backgroundColor: "#7D9276"
+                }
+            }
+        });
+    </script>
+
     
 </body>
 </html>

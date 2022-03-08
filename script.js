@@ -54,37 +54,4 @@ sophie.scrollArrow = () => {
     }, 4500)
 }
 
-// connecting to formspree
-    window.formbutton=window.formbutton||function(){(formbutton.q = formbutton.q || []).push(arguments)};
-    /* customize formbutton below*/
-    formbutton("create", {
-        action: "https://formspree.io/f/mdobzzbr",
-        title: "Send Sophie a message!",
-        fields: [
-            {
-                type: "email",
-            label: "Email:",
-            name: "email",
-            required: true,
-            placeholder: "your@email.com"
-            },
-            {
-                type: "textarea",
-            label: "Message:",
-            name: "message",
-            required: true,
-            placeholder: "Your message",
-            },
-            {type: "submit" }
-        ],
-    styles: {
-        title: {
-            backgroundColor: "#EBB859"
-        },
-        button: {
-            backgroundColor: "#7D9276"
-        }
-    }
-});
-
 sophie.init();
