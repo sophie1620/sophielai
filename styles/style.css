@@ -739,7 +739,7 @@ ul.skillsUsed li i {
 }
 
 section.contact {
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 .contact h2::after {
@@ -769,7 +769,7 @@ section.contact {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 40px 0 150px;
+  padding: 40px 0 130px;
 }
 .messageForm .thankYouMsg {
   width: 40%;
