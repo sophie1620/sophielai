@@ -1126,16 +1126,16 @@ nav label.mobileNav {
   }
 
   .skills h3::after {
-    margin-left: -66px;
-    margin-top: 0.5rem;
+    margin-left: -62px;
+    margin-top: 0.6rem;
   }
 
   .portfolio h2::after {
-    margin-left: -270px;
+    margin-left: -263px;
   }
 
   .contact h2::after {
-    margin-left: -220px;
+    margin-left: -214px;
   }
 }
 @media (max-width: 390px) {
