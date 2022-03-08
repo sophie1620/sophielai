@@ -37,34 +37,32 @@
         <label for="mobileNav" class="mobileNav wrapper"><i class="fas fa-bars menuIcon"></i></label>
 
         <ul class="mobileNavMenu wrapper">
-            <li> <a href="#about">about</a> </li>
-            <li> <a href="#portfolio">portfolio</a> </li>
-            <li> <a href="#contact">contact</a> </li>
+            <li> <a href="#about">About</a> </li>
+            <li> <a href="#portfolio">Portfolio</a> </li>
+            <li> <a href="#contact">Contact</a> </li>
         </ul>
     </nav>
     <!-- header -->
     <header>
         <div class="wrapper">
-            <h1 class="hello">hello<span class="accentDot">,</span></h1>
+            <h1 class="hello">Hello<span class="accentDot">,</span></h1>
             <div class="nameDiv">
                 <h1 class="mobileH1">I'm Sophie</h1>
             </div>  
 
             <div class="scrollArrow">
-            <i class="fa-solid"></i>
-            </div>
-            <!-- fa-angle-down -->
-            
+                <i class="fa-solid"></i>
+            </div>    
         </div>
     </header> <!-- end of header -->
 
     <!-- main -->
     <main>
         <!-- about section -->
-        <section id="about" class="about wrapper" tabindex="0">
+        <section id="about" class="about wrapper">
             <div class="aboutMe">
                 <div class="bio">
-                <h2>About Me</h2>
+                    <h2>About Me</h2>
                     <div class="pContainer">
                         <p>I'm a front-end developer and a graduate of Juno College's Web Development Bootcamp.  I create responsive and inclusive websites that are accessible to all. I use my teaching background to ensure that the websites are user-friendly and intuitive. </p>
                         
@@ -115,7 +113,7 @@
         </section>
 
         <!-- portfolio section -->
-        <section id="portfolio" class="portfolio wrapper" tabindex="0">
+        <section id="portfolio" class="portfolio wrapper">
             <h2>Sophie's Creations</h2>
             <div class="portfolio">
                 <ul>
@@ -245,7 +243,7 @@
         </section>
 
         <!-- contact me section -->
-        <section id="contact" class="contact wrapper" tabindex="0">
+        <section id="contact" class="contact wrapper">
             <h2>Contact Sophie</h2>
 
             <div class="messageForm">
@@ -275,25 +273,24 @@
                     </ul>
                 </div>
 
-                <form action="https://formspree.io/f/mdobzzbr" method=""POST">
+                <form action="https://formspree.io/f/mdobzzbr" method="POST">
                     <fieldset>
                         <div class="senderInfo">
                             <label for="name" class="sr-only">Name</label>
-                            <input type="text" name="name" id="name" placeholder="Full name">
+                            <input type="text" name="name" id="name" placeholder="Full name" required>
                             
                             <label for="email" class="sr-only">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Email address">
+                            <input type="email" name="email" id="email" placeholder="Email address" required>
                         </div>
                         
                         <label for="message" class="sr-only">Message</label>
-                        <textarea name="message" id="message" placeholder="Your message here"></textarea>
+                        <textarea name="message" id="message" placeholder="Your message here" required></textarea>
                         
                         <button type="submit">Send</button>
                     </fieldset>
                 </form>
             </div> <!-- end of .messageForm -->
         </section>
-
     </main> <!-- end of main -->
 
     <!-- footer -->
@@ -307,6 +304,8 @@
     </footer> <!-- end of footer -->
 
     <script src="./script.js"></script>
+
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
     
 </body>
 </html>

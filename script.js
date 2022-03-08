@@ -4,8 +4,6 @@ sophie.init = function() {
     sophie.mobileNav();
     sophie.nameElement();
     sophie.scrollArrow();
-    // sophie.formValidation();
-    sophie.form();
 } //end of init function
 
 // mobile menu 
@@ -56,59 +54,37 @@ sophie.scrollArrow = () => {
     }, 4500)
 }
 
-// form submit event listener
-sophie.form = () => {
-    const form = document.querySelector('form');
-    const name = document.querySelector('#name');
-    const fieldset = document.querySelector('fieldset');
-
-    
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // console.log(name.value);
-        const senderName = name.value;
-        console.log('senderName:', senderName);
-        const senderGreeting = senderName.toUpperCase();
-
-        fieldset.innerHTML = "";
-
-        fieldset.classList.add('thankYouBg');
-
-        const pElement = document.createElement('p');
-        pElement.textContent = `Thank you for sending Sophie an email, ${senderGreeting}!`;
-        fieldset.append(pElement);
-
-        const p2Element = document.createElement('p');
-        p2Element.textContent = 'She will get back to you as soon as possible. ☺️';
-        fieldset.append(p2Element);
-    })
-}
-
-// form validation
-// sophie.formValidation = () => {
-//     const form = document.querySelector('form');
-//     const name = document.querySelector('input[name=name]');
-//     console.log(name);
-//     const userName = name.value;
-
-//     const email = document.querySelector('input[type=email]');
-//     console.log(email);
-//     const userEmail = email.value;
-
-//     const message = document.querySelector('textarea');
-//     console.log(message);
-//     const userM
-
-//     form.addEventListener('submit', function(e) {
-//         e.preventDefault();
-
-//         // if (userName && userEmail && userMessage) {
-//         //     sophie.form();
-//         // } else {
-//         //     alert(`Oops! It seems like you didn't fill out the entire form.  Please ensure all sections are completed so Sophie can respond to you.  Thank you!`);
-//         // }
-//     })
-
-// }
+// connecting to formspree
+    window.formbutton=window.formbutton||function(){(formbutton.q = formbutton.q || []).push(arguments)};
+    /* customize formbutton below*/
+    formbutton("create", {
+        action: "https://formspree.io/f/mdobzzbr",
+        title: "Send Sophie a message!",
+        fields: [
+            {
+                type: "email",
+            label: "Email:",
+            name: "email",
+            required: true,
+            placeholder: "your@email.com"
+            },
+            {
+                type: "textarea",
+            label: "Message:",
+            name: "message",
+            required: true,
+            placeholder: "Your message",
+            },
+            {type: "submit" }
+        ],
+    styles: {
+        title: {
+            backgroundColor: "#EBB859"
+        },
+        button: {
+            backgroundColor: "#7D9276"
+        }
+    }
+});
 
 sophie.init();
