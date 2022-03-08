@@ -47,7 +47,7 @@ input[type="checkbox"] {
 
 i.fa-bars, 
 i.fa-times {
-    background-color: $primaryLight;
+    background-color: $primary;
     padding: 10px;
     border-radius: 10px;
     width: 51.5px;
@@ -63,14 +63,15 @@ ul.mobileNavMenu {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 120px;
-    background-color: $primaryLight;
+    width: 300px;
+    background-color: $primary;
     padding: 0 10px;
     border-radius: 10px;
     transition: 2s;
+    z-index: 50;
 
     li {
-        text-align: right;
+        text-align: center;
         padding: 10px 0 10px;
         border-bottom: 1px solid transparent;
 

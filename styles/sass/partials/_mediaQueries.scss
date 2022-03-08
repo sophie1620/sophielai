@@ -192,6 +192,11 @@
         }
     }
 
+    /* media queries for nav */
+    input[type="checkbox"]:focus ~ label {
+        border: none;
+    }
+
     /* media queries for form */
     fieldset .senderInfo {
         flex-direction: column;

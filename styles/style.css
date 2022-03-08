@@ -429,7 +429,7 @@ input[type=checkbox]:checked ~ .mobileNavMenu {
 
 i.fa-bars,
 i.fa-times {
-  background-color: #EBB85980;
+  background-color: #EBB859;
   padding: 10px;
   border-radius: 10px;
   width: 51.5px;
@@ -453,15 +453,16 @@ ul.mobileNavMenu {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  width: 120px;
-  background-color: #EBB85980;
+  width: 300px;
+  background-color: #EBB859;
   padding: 0 10px;
   border-radius: 10px;
   -webkit-transition: 2s;
   transition: 2s;
+  z-index: 50;
 }
 ul.mobileNavMenu li {
-  text-align: right;
+  text-align: center;
   padding: 10px 0 10px;
   border-bottom: 1px solid transparent;
 }
@@ -1128,6 +1129,11 @@ nav label.mobileNav {
   }
   h1.mobileH1::after {
     margin-left: -288px;
+  }
+
+  /* media queries for nav */
+  input[type=checkbox]:focus ~ label {
+    border: none;
   }
 
   /* media queries for form */
