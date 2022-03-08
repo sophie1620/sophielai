@@ -3,6 +3,7 @@ const sophie = {};
 sophie.init = function() {
     sophie.mobileNav();
     sophie.nameElement();
+    sophie.scrollArrow();
     sophie.form();
 } //end of init function
 
@@ -42,6 +43,15 @@ sophie.nameElement = () => {
         nameDiv.appendChild(h1Element);
 
     }, 3500);
+}
+
+sophie.scrollArrow = () => {
+    const icon = document.querySelector('.fa-solid');
+    
+    setTimeout( () => {
+        icon.classList.add('fa-angle-down');
+        
+    }, 4500)
 }
 
 // form submit event listener

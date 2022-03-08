@@ -550,6 +550,44 @@ h1.mobileH1 {
   border: 1px solid transparent;
 }
 
+.scrollArrow {
+  height: 6rem;
+}
+
+i.fa-angle-down {
+  color: #EBB859;
+  font-size: 3.5rem;
+  position: relative;
+  top: 10%;
+  left: calc(50% - 1rem);
+  margin-top: 5rem;
+  -webkit-animation: scrollDown 5s infinite;
+          animation: scrollDown 5s infinite;
+}
+
+@-webkit-keyframes scrollDown {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 20%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 20%;
+  }
+  100% {
+    top: 0%;
+  }
+}
 section.about {
   padding-top: 2rem;
 }
