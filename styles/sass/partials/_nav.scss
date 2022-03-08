@@ -33,6 +33,11 @@ input[type="checkbox"] {
     position: relative;
     left: 90%;
 
+    &:focus ~ label {
+        border: 1px dotted $primary;
+        height: 3rem;
+    }
+
     &:checked ~ .mobileNavMenu {
         display: block;
         position: fixed;

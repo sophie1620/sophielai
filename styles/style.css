@@ -418,6 +418,10 @@ input[type=checkbox] {
   position: relative;
   left: 90%;
 }
+input[type=checkbox]:focus ~ label {
+  border: 1px dotted #EBB859;
+  height: 3rem;
+}
 input[type=checkbox]:checked ~ .mobileNavMenu {
   display: block;
   position: fixed;
@@ -905,10 +909,6 @@ p.designInspo {
   }
 }
 @media (max-width: 840px) {
-  header {
-    height: 80vh;
-  }
-
   h1 {
     font-size: 5rem;
   }
