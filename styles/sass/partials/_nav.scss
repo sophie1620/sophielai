@@ -30,9 +30,10 @@ nav {
 
 /* pop-put menu for mobileNavMenu */
 input[type="checkbox"] {
-    opacity: 0;
-    position: relative;
+    position: fixed;
     left: 90%;
+    top: 0;
+    // opacity: 0;
 
     &:focus ~ label {
         border: 1px dotted $primary;
@@ -41,8 +42,18 @@ input[type="checkbox"] {
 
     &:checked ~ .mobileNavMenu {
         display: block;
-        position: fixed;
     }
+}
+
+label {
+    background-color: $backgroundColor;
+    position: fixed;
+    top: 0;
+    left: 20px;
+    padding-top: 10px;
+    height: 65px;
+    width: 100%;
+    z-index: 50;
 }
 
 i.fa-bars, 
@@ -57,13 +68,15 @@ i.fa-times {
 }
 
 ul.mobileNavMenu {
-    position: absolute;
+    position: fixed;
     right: 5%;
     top: 10%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 300px;
+    overflow: hidden;
+    // width: 300px;
+    width: calc(100% - 10%);
     background-color: $primary;
     padding: 0 10px;
     border-radius: 10px;
@@ -74,6 +87,7 @@ ul.mobileNavMenu {
         text-align: center;
         padding: 10px 0 10px;
         border-bottom: 1px solid transparent;
+        z-index: 50;
 
         &:hover{
             border-bottom: 2px solid $secondary;

@@ -216,6 +216,10 @@ html {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .visuallyHidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -414,9 +418,9 @@ nav ul.desktopNav a:hover {
 
 /* pop-put menu for mobileNavMenu */
 input[type=checkbox] {
-  opacity: 0;
-  position: relative;
+  position: fixed;
   left: 90%;
+  top: 0;
 }
 input[type=checkbox]:focus ~ label {
   border: 1px dotted #EBB859;
@@ -424,7 +428,17 @@ input[type=checkbox]:focus ~ label {
 }
 input[type=checkbox]:checked ~ .mobileNavMenu {
   display: block;
+}
+
+label {
+  background-color: #F9F7F6;
   position: fixed;
+  top: 0;
+  left: 20px;
+  padding-top: 10px;
+  height: 65px;
+  width: 100%;
+  z-index: 50;
 }
 
 i.fa-bars,
@@ -440,7 +454,7 @@ i.fa-times {
 }
 
 ul.mobileNavMenu {
-  position: absolute;
+  position: fixed;
   right: 5%;
   top: 10%;
   display: -webkit-box;
@@ -453,7 +467,8 @@ ul.mobileNavMenu {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  width: 300px;
+  overflow: hidden;
+  width: 90%;
   background-color: #EBB859;
   padding: 0 10px;
   border-radius: 10px;
@@ -465,6 +480,7 @@ ul.mobileNavMenu li {
   text-align: center;
   padding: 10px 0 10px;
   border-bottom: 1px solid transparent;
+  z-index: 50;
 }
 ul.mobileNavMenu li:hover {
   border-bottom: 2px solid #7D9276;
@@ -537,7 +553,7 @@ h1.mobileH1 {
   content: "";
   width: 24rem;
   height: 3rem;
-  background: #EBB85980;
+  background: rgba(235, 184, 89, 0.5019607843);
   display: inline;
   margin-left: -410px;
   margin-top: 2rem;
@@ -554,14 +570,19 @@ h1.mobileH1 {
 .scrollArrow {
   height: 6rem;
 }
+.scrollArrow a {
+  position: relative;
+  left: calc(50% - 1rem);
+  height: 300px;
+}
 
 i.fa-angle-down {
   color: #EBB859;
   font-size: 3.5rem;
   position: relative;
   top: 10%;
-  left: calc(50% - 1rem);
   margin-top: 5rem;
+  height: 100px;
   -webkit-animation: scrollDown 5s infinite;
           animation: scrollDown 5s infinite;
 }
@@ -597,7 +618,7 @@ section.about {
   content: "";
   width: 11rem;
   height: 1.5rem;
-  background: #EBB85980;
+  background: rgba(235, 184, 89, 0.5019607843);
   display: inline;
   margin-left: -180px;
   margin-top: 1rem;
@@ -630,7 +651,7 @@ section.about {
   content: "";
   width: 5.5rem;
   height: 1.2rem;
-  background: #EBB85980;
+  background: rgba(235, 184, 89, 0.5019607843);
   display: inline;
   margin-left: -85px;
   margin-top: 0.9rem;
@@ -671,7 +692,7 @@ section.portfolio {
   content: "";
   width: 19.5rem;
   height: 1.5rem;
-  background: #EBB85980;
+  background: rgba(235, 184, 89, 0.5019607843);
   display: inline;
   margin-left: -350px;
   margin-top: 1rem;
@@ -696,12 +717,13 @@ section.portfolio {
   width: 330px;
   border-radius: 10px;
   border: 5px solid #7D9276;
-  background-color: #7D927680;
+  background-color: rgba(125, 146, 118, 0.5019607843);
   padding: 45px 0.5rem 20px;
   margin: 1rem;
+  height: 550px;
 }
 .portfolio ul li.projectContainer:hover {
-  background-color: #EBB85980;
+  background-color: rgba(235, 184, 89, 0.5019607843);
   border: 5px solid #EBB859;
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
@@ -738,6 +760,20 @@ section.portfolio {
   border: 3px solid #7D9276;
 }
 
+.product {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .product .imgContainer {
   width: 90%;
   height: 180px;
@@ -755,9 +791,24 @@ section.portfolio {
   border: 2px solid #FFAB40;
 }
 
+.projectDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 55%;
+}
+
 .projectDescription p {
   text-align: center;
   font-size: 0.7rem;
+  margin: 10px 0 0;
 }
 
 .projectDescription a:hover,
@@ -796,7 +847,7 @@ section.contact {
   content: "";
   width: 16rem;
   height: 1.5rem;
-  background: #EBB85980;
+  background: rgba(235, 184, 89, 0.5019607843);
   display: inline;
   margin-left: -280px;
   margin-top: 1rem;
@@ -896,7 +947,7 @@ fieldset textarea {
   margin-bottom: 0.8rem;
   padding: 0.5rem;
   border-radius: 10px;
-  background-color: #FBF6EA4D;
+  background-color: rgba(251, 246, 234, 0.3019607843);
 }
 fieldset input[type=text] {
   width: 40%;
@@ -941,7 +992,7 @@ p.location a {
   color: #F9F7F6;
 }
 p.location a:hover {
-  color: #7D927680;
+  color: rgba(125, 146, 118, 0.5019607843);
 }
 p.location a:focus {
   border: 1px dotted #7D9276;

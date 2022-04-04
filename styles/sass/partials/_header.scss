@@ -53,15 +53,25 @@ h1.mobileH1 {
 
 .scrollArrow {
     height: 6rem;
+
+    a {
+        position: relative;
+        left: calc(50% - 1rem);
+        height: 300px;
+    }
 }
+
+
 
 i.fa-angle-down {
     color: $primary;
     font-size: 3.5rem;
     position: relative;
     top: 10%;
-    left: calc(50% - 1rem);
+    // left: calc(50% - 1rem);
     margin-top: 5rem;
+    // border: 1px solid blue;
+    height: 100px;
     animation: scrollDown 5s infinite;
 }
 
