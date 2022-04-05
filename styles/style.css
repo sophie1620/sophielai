@@ -490,14 +490,20 @@ ul.mobileNavMenu li:focus {
 }
 
 header {
-  padding-top: 2rem;
-  height: 100vh;
+  padding-top: 1rem;
+  height: calc(100vh - 75px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  top: 75px;
+  overflow: hidden;
+}
+header div.wrapper {
+  height: 100%;
 }
 
 h1.hello {
@@ -509,6 +515,10 @@ h1.hello {
   letter-spacing: 0.15em;
   -webkit-animation: typing 3.5s steps(30, end), blink 0.5s step-end infinite;
           animation: typing 3.5s steps(30, end), blink 0.5s step-end infinite;
+}
+
+h1.animate__animated {
+  margin-top: 0.4em;
 }
 
 h1.mobileH1 {

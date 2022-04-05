@@ -1,8 +1,16 @@
 header {
-    padding-top: 2rem;
-    height: 100vh;
+    padding-top: 1rem;
+    height: calc(100vh - 75px);
     display: flex;
     align-items: center;
+    // border: 1px solid red;
+    position: relative;
+    top: 75px;
+    overflow: hidden;
+
+    div.wrapper {
+        height: 100%;
+    }
 }
 
 // typewriter effect
@@ -16,6 +24,10 @@ h1.hello {
     animation: 
         typing 3.5s steps(30, end), 
         blink 0.5s step-end infinite;
+}
+
+h1.animate__animated {
+    margin-top: 0.4em;
 }
 
 h1.mobileH1 {
@@ -61,8 +73,6 @@ h1.mobileH1 {
     }
 }
 
-
-
 i.fa-angle-down {
     color: $primary;
     font-size: 3.5rem;
@@ -70,7 +80,6 @@ i.fa-angle-down {
     top: 10%;
     // left: calc(50% - 1rem);
     margin-top: 5rem;
-    // border: 1px solid blue;
     height: 100px;
     animation: scrollDown 5s infinite;
 }
