@@ -222,6 +222,14 @@
             height: 1.8rem;
         }
     }
+
+    i.fa-angle-down {
+        display: none;
+    }
+
+    header {
+        height: 35vh;
+    }
 }
 
 @media (max-width:475px) {
