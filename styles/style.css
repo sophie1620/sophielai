@@ -1184,8 +1184,8 @@ nav label.mobileNav {
 }
 @media (max-width: 575px) {
   h1.hello {
-    -webkit-animation: blink 0.5s step-end infinite;
-            animation: blink 0.5s step-end infinite;
+    -webkit-animation: blink none;
+            animation: blink none;
   }
 
   h1.animate__animated {

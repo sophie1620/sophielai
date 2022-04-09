@@ -177,7 +177,8 @@
 
 @media (max-width: 575px) {
     h1.hello {
-        animation: blink 0.5s step-end infinite;
+        animation: blink none;
+        // blink 0.5s step-end;
     }
 
     h1.animate__animated {
